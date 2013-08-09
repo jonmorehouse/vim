@@ -23,3 +23,9 @@ Submodule Tips
 
 	`git submodule foreach git fetch`
 
+
+Installing Command-T for Vim
+-
+
+-	[Download](https://wincent.com/products/command-t)
+-	[Tutorial](http://sjk.ankeborg.nu/2012/12/29/how-to-install-command-t-for-vim-on-mac-os-x.html)
