@@ -4,9 +4,6 @@
 [submodule "bundle/localrc"]
 	path = bundle/localrc
 	url = git://github.com/vim-scripts/localrc.vim.git
-[submodule "bundle/lusty"]
-	path = bundle/lusty
-	url = git://github.com/sjbach/lusty.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
