@@ -4,10 +4,11 @@ Jon Morehouse's Vim Configuration
 Installation
 -
 
--	1.) Make sure install script has executable privileges
+-	1.) Git clone --recursive http://github.com/MorehouseJ09/vim.git
+-	2.) Make sure install script has executable privileges
 
 		`chmod +x install.sh`
--	2.) Run the install script and it will install vimrc
+-	3.) Run the install script and it will install vimrc
 	
 		`./install.sh`
 	
