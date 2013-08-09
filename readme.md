@@ -1,10 +1,12 @@
 Jon Morehouse's Vim Configuration
 =
 
-Tasks
+Installation
 -
 
--	1.) Modularize this into its own repository so that a recursive clone will make everything "just work"
--	2.) Modularize functions into their own folder
+-	1.) Make sure install script has executable privileges
 
-
+		`chmod +x install.sh`
+-	2.) Run the install script and it will install vimrc
+	
+		`./install.sh`
