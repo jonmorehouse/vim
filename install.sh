@@ -7,4 +7,4 @@ then
 fi
 
 # now link up the file to the correct location
-ln -s vimrc $HOME/.vimrc
+ln -s ./vimrc $HOME/.vimrc
