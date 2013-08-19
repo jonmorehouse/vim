@@ -114,7 +114,13 @@ fu! Grunt(command)
 
 endfunction
 
+" initialize a command to just pass commands to 
+fu! Shell(command)
+	
+	execute "! " . a:command
 
+endfunction
+	
 
 """""""""
 """""""""
@@ -131,8 +137,8 @@ noremap <Leader>x :q<CR>
 
 " now map some shortcuts to run our favorite grunt r commands (to restart
 " tasks and servers)
-noremap <Leader>r :call Grunt("r")<CR>
-noremap <Leader>rr :call Grunt("rr")<CR>
+noremap <Leader>r :call Grunt("r")<CR><CR>
+noremap <Leader>rr :call Grunt("rr")<CR><CR>
 
 
 """""""""
