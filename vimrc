@@ -153,3 +153,10 @@ noremap <Leader>rr :call Grunt("rr")<CR><CR>
 vmap Q gq
 nmap Q gqap
 
+""" Initialize go settings -- only if the go path is specified however
+if $GOROOT != ""
+	set retp+=$GOROOT/misc/vim		
+	filetype plugin indent on
+	syntax on
+endif
+
