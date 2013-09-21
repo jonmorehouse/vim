@@ -12,6 +12,16 @@ execute pathogen#helptags()
 
 """""""""
 """""""""
+"	 Initialize any settings that need to be safely overridden later
+"""""""""
+"""""""""
+if $GOROOT != ""
+	set rtp+=$GOROOT/misc/vim		
+endif
+
+
+"""""""""
+"""""""""
 "	 Initialize Vim Themes / Colors
 """""""""
 """""""""
@@ -97,6 +107,11 @@ command! WW :w !sudo tee %
 " new tab shortcut
 command! T :tabedit
 
+" create a pomdoro shortcut to call the pomodoro function from anywhere within
+" vim
+command! PMD :! $PMDPATH start
+
+
 """""""""
 """""""""
 "        Initialize vim functions here
@@ -120,7 +135,33 @@ fu! Shell(command)
 	execute "! " . a:command
 
 endfunction
-	
+
+" start a pomodoro!
+fu! StopPomodoro()
+
+	" generate proper commands for deleting existing processes
+	let pid = system("ps -a | grep pmd | grep -v grep | awk '{ print $1 }'")
+
+	" make sure the pid is not null
+	if pid != ""
+
+		execute "! kill " . pid
+
+	endif
+endfunction
+
+" Relies upon pomodoro program path being set as an environment variable
+fu! StartPomodoro()
+
+	if $PMDPATH != "" && filereadable($PMDPATH)
+
+		" start the pomodoro program using the pmdpath to the script
+		execute "! " . $PMDPATH . " start"
+
+	else
+		echo "Invalid Pomodoro Path"
+	endif	
+endfunction
 
 """""""""
 """""""""
@@ -134,12 +175,12 @@ noremap <Leader>s :update<CR>
 noremap <Leader>ss :wall<CR>
 noremap <Leader>x :q<CR>
 
-
 " now map some shortcuts to run our favorite grunt r commands (to restart
 " tasks and servers)
 noremap <Leader>r :call Grunt("r")<CR><CR>
 noremap <Leader>rr :call Grunt("rr")<CR><CR>
-
+noremap <Leader>p :call StartPomodoro()<CR><CR>
+noremap <Leader>pp :call StopPomodoro()<CR><CR>
 
 """""""""
 """""""""
@@ -153,10 +194,4 @@ noremap <Leader>rr :call Grunt("rr")<CR><CR>
 vmap Q gq
 nmap Q gqap
 
-""" Initialize go settings -- only if the go path is specified however
-if $GOROOT != ""
-	set retp+=$GOROOT/misc/vim		
-	filetype plugin indent on
-	syntax on
-endif
 
