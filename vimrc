@@ -156,8 +156,19 @@ fu! StartPomodoro()
 	if $PMDPATH != "" && filereadable($PMDPATH)
 
 		" start the pomodoro program using the pmdpath to the script
-		execute "! " . $PMDPATH . " start"
+		execute "! " . $PMDPATH 
+	else
+		echo "Invalid Pomodoro Path"
+	endif	
+endfunction
 
+" Relies upon pomodoro program path being set as an environment variable
+fu! StartBreak()
+
+	if $PMDPATH != "" && filereadable($PMDPATH)
+
+		" start the pomodoro program using the pmdpath to the script
+		execute "! " . $PMDPATH . " break"
 	else
 		echo "Invalid Pomodoro Path"
 	endif	
@@ -181,6 +192,7 @@ noremap <Leader>r :call Grunt("r")<CR><CR>
 noremap <Leader>rr :call Grunt("rr")<CR><CR>
 noremap <Leader>p :call StartPomodoro()<CR><CR>
 noremap <Leader>pp :call StopPomodoro()<CR><CR>
+noremap <Leader>b :call StartBreak()<CR><CR>
 
 """""""""
 """""""""
