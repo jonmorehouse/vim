@@ -79,6 +79,15 @@ set showmatch
 " check out the matching time / responsiveness for brackets in vim etc
 set matchtime=1
 
+""""""""
+""""""""
+"	Intialize vim hacker 
+""""""""
+""""""""
+" ensure that we safely change the directory to the current buffer as changing
+" etc
+autocmd BufEnter * silent! lcd %:p:h
+
 """""""""
 """""""""
 " 	Initialize general commands mapped off  
