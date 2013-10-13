@@ -190,10 +190,24 @@ endfunction
 
 let mapleader = ","
 " initialize save 
-noremap <Leader>s :update<CR>
-noremap <Leader>ss :wall<CR>
+noremap <Leader>s :wall<CR>
+noremap <Leader>ss :update<CR>
+
+" initialize exit shortcut!!
 noremap <Leader>x :q<CR>
 
+"""""""""
+"""""""""
+"	Initialize Buffer shortcuts
+"""""""""
+"""""""""
+noremap <Leader>n :bp<CR>
+
+"""""""""
+"""""""""
+"	Initialize workflow shortcuts
+"""""""""
+"""""""""
 " now map some shortcuts to run our favorite grunt r commands (to restart
 " tasks and servers)
 noremap <Leader>r :call Grunt("r")<CR><CR>
