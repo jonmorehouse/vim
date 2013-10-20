@@ -3,7 +3,6 @@
 "	 Initialize our bundles and pathogen for loading them up
 """""""""
 """""""""
-
 "load up our bundle loaders!
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 " initialize pathogen to help with bundles
@@ -140,7 +139,7 @@ noremap <Leader>s :wall<CR>
 noremap <Leader>ss :wall<CR>
 
 " initialize exit shortcut!!
-noremap <Leader>x :q<CR>
+noremap <Leader>x :bd<CR>
 
 """""""""
 """""""""
@@ -180,10 +179,14 @@ noremap <Leader>gp gT<CR>
 " tasks and servers)
 noremap <Leader>r :call Grunt("r")<CR><CR>
 noremap <Leader>rr :call Grunt("rr")<CR><CR>
-noremap <Leader>p :call StartPomodoro()<CR><CR>
-noremap <Leader>pp :call StopPomodoro()<CR><CR>
-noremap <Leader>b :call StartBreak()<CR><CR>
-noremap <Leader>t :call BasePath()<CR><CR>
+
+" map up pomodoro start and stop functions
+noremap <Leader>pp :call StartPomodoro()<CR><CR>
+noremap <Leader>px :call StopPomodoro()<CR><CR>
+noremap <Leader>pb :call StartBreak()<CR><CR>
+
+" head back to the base directory with a clean buffer
+noremap <Leader>t :call CDBasePath()<CR><CR>
 
 """""""""
 """""""""
@@ -207,3 +210,6 @@ nmap Q gqap
 
 " now lets actually call the global vimrc file at all times
 call NewSession()
+
+
+

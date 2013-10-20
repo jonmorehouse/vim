@@ -3,6 +3,14 @@
 "	 General Vim functions
 """"""""
 """""""""
+fu! ReloadVimrc()
+
+	"let bufferNumber = :bufnr(%)
+
+	"echo bufferNumber
+
+endfunction
+
 " local.vimrc override!
 fu! LocalVimrc()
 	
