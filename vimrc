@@ -120,7 +120,7 @@ command! T :tabedit
 "	 Custom Function Command Mappings
 """"""""
 """"""""
-source functions.vimrc
+source $HOME/functions.vimrc
 
 " update the pomodoro start path
 command! PMD :! $PMDPATH start
