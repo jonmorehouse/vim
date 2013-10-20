@@ -147,7 +147,6 @@ noremap <Leader>x :q<CR>
 "	Initialize Buffer shortcuts
 """""""""
 """""""""
-command! B echo "asdf"
 noremap <Leader>bb :buffers<CR>
 noremap <Leader>bp :bp<CR>
 noremap <Leader>bn :bn<CR>

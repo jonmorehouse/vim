@@ -14,6 +14,7 @@ fu! LocalVimrc()
 	endif
 endfunction
 
+" update the base path
 fu! CDBasePath()
 	
 	" do nothing if the basePath doesn't exist
@@ -38,6 +39,10 @@ fu! NewSession()
 
 	" set the basePath
 	let g:basePath = getcwd()
+
+	" always go into directory mode
+	" call this silently!!
+	silent :call CDBasePath()
 
 endfunction
 
