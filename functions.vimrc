@@ -62,6 +62,20 @@ fu! CleanShell(command)
 
 endfunction
 
+" Fancy close command for closing out buffers / vim in general
+fu! Close()
+
+	" get the length of all buffers
+	let buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+
+	" close the editor entirely if this is the last buffer!
+	if buffers == "1" || buffers == "0"
+		:q
+	else
+		:bd	
+	endif
+endfunction
+
 
 
 """""""""

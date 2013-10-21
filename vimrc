@@ -139,7 +139,7 @@ noremap <Leader>s :wall<CR>
 noremap <Leader>ss :wall<CR>
 
 " initialize exit shortcut!!
-noremap <Leader>x :bd<CR>
+noremap <Leader>x :call Close()<CR>
 
 """""""""
 """""""""
@@ -149,7 +149,7 @@ noremap <Leader>x :bd<CR>
 noremap <Leader>bb :buffers<CR>
 noremap <Leader>bp :bp<CR>
 noremap <Leader>bn :bn<CR>
-noremap <Leader>bx :bx<CR>
+noremap <Leader>bd :bd<CR>
 
 " commands for switching buffers quicker
 noremap <Leader>b1 :b1<CR>
