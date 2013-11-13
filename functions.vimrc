@@ -34,9 +34,7 @@ fu! CDBasePath()
 	let path = g:basePath . "/" 
 	
 	" if it does exist then we want to open the base dir 
-	":edit path
 	execute "edit " . g:basePath
-
 endfunction
 
 " elements to call and set whenever we start a new function
