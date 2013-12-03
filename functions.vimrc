@@ -22,6 +22,19 @@ fu! LocalVimrc()
 	endif
 endfunction
 
+" go into second path
+fu! CDSecondaryPath()
+
+	if !exists("g:secondaryPath")	
+	
+		return
+	endif
+
+	" if it does exist then we want to open the base dir 
+	execute "edit " . g:secondaryPath
+
+endfunction
+
 " update the base path
 fu! CDBasePath()
 	
@@ -31,8 +44,6 @@ fu! CDBasePath()
 		return
 	endif
 
-	let path = g:basePath . "/" 
-	
 	" if it does exist then we want to open the base dir 
 	execute "edit " . g:basePath
 endfunction

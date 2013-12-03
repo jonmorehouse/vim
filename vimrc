@@ -126,6 +126,7 @@ command! PMD :! $PMDPATH start
 
 " reset the basepath
 command! E :call CDBasePath()
+command! EE :call CDSecondaryPath()
 
 """""""""
 """""""""
