@@ -1,29 +1,11 @@
 """""""""
 """""""""
-"	 General Vim functions
+"	 PATH UTILTIES
 """"""""
 """""""""
-fu! ReloadVimrc()
-
-	"let bufferNumber = :bufnr(%)
-
-	"echo bufferNumber
-
-endfunction
-
-" local.vimrc override!
-fu! LocalVimrc()
-	
-	let localPath = getcwd() . "/.local.vimrc"
-		
-	if filereadable(localPath)
-
-		:so .local.vimrc
-	endif
-endfunction
 
 " go into second path
-fu! CDSecondaryPath()
+ru! CDSecondaryPath()
 
 	if !exists("g:secondaryPath")	
 	
@@ -38,7 +20,34 @@ endfunction
 " update the base path
 fu! CDBasePath()
 	
-	" do nothing if the basePath doesn't exist
+" do nothing if the basePath dt reset path to the current path
+" this is useful for setting the path of tests to be run when you are working
+" on various files 
+fu! UpdatePath() 
+	
+	" cache the current word directory
+	let g:currentPath = getcwd()
+
+endfunction
+
+" do nothing if the basePath dt reset path to the current path
+" this is useful for setting the path of tests to be run when you are working
+" on various files 
+fu! UpdateSecondaryPath() 
+	
+	" cache the current word directory
+	let g:secondaryPath = getcwd()
+
+endfunction
+
+" update the current path to the current file
+fu! UpdatePathToFile()
+	
+	let g:currentPath = getcwd() . "/" . bufname("%")
+
+endfunction
+
+esn't exist
 	if !exists("g:basePath")
 		
 		return
@@ -46,6 +55,38 @@ fu! CDBasePath()
 
 	" if it does exist then we want to open the base dir 
 	execute "edit " . g:basePath
+endfunction
+
+
+
+"""""""""
+"""""""""
+"        GENERAL UTILITIES 
+"""""""""
+"""""""""
+" local.vimrc override!
+fu! LocalVimrc()
+	
+	let localPath = getcwd() . "/.local.vimrc"
+		
+	if filereadable(localPath)
+
+		:so .local.vimrc
+	endif
+endfunction
+
+" Fancy close command for closing out buffers / vim in general
+fu! Close()
+
+	" get the length of all buffers
+	let buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+
+	" close the editor entirely if this is the last buffer!
+	if buffers == "1" || buffers == "0"
+		:q
+	else
+		:bd	
+	endif
 endfunction
 
 " elements to call and set whenever we start a new function
@@ -68,6 +109,12 @@ fu! NewSession()
 	endif
 endfunction
 
+
+"""""""""
+"""""""""
+"        Shell / Grunt Commands
+"""""""""
+"""""""""
 " Shell command helpers
 " run a command on a clean shell
 fu! CleanShell(command)
@@ -75,28 +122,6 @@ fu! CleanShell(command)
 	execute "! printf \"\033c\" && " . a:command
 
 endfunction
-
-" Fancy close command for closing out buffers / vim in general
-fu! Close()
-
-	" get the length of all buffers
-	let buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
-
-	" close the editor entirely if this is the last buffer!
-	if buffers == "1" || buffers == "0"
-		:q
-	else
-		:bd	
-	endif
-endfunction
-
-
-
-"""""""""
-"""""""""
-"        Initialize vim specific workflow functions here
-"""""""""
-"""""""""
  
 " initialize a grunt helper command -- this is useful for when restarting
 " tests on local projects etc
@@ -116,6 +141,40 @@ fu! Shell(command)
 
 endfunction
 
+fu! RunFabCommand()
+
+	" make sure that we have the current path set to ensure that errors
+	" are handled properly!!
+	if !exists("g:currentPath")
+		let g:currentPath = "."
+	endif
+
+	if !exists("g:fabCommand")
+		
+		let g:fabCommand = "--list-format=nested --list"
+	endif
+
+	" set appropriate variables for calling nose functions!
+	let baseDir = "/Users/MorehouseJ09/Documents/production_development/thestreetpicks/email_app"
+	let fab = baseDir . "/bin/fab" 
+	let virtualEnv = baseDir . "/bin/activate"
+	let fabCommand = "create_server"
+
+	" run the command as necessary
+	let command = "source " . virtualEnv . " && " . fab . " " . g:fabCommand
+
+	" now lets actually execute the function  command that we created!
+	call CleanShell(command)
+endfunction
+
+
+
+
+"""
+"""
+""" Pomodoro Functions
+"""
+"""
 " start a pomodoro!
 fu! StopPomodoro()
 
@@ -153,4 +212,7 @@ fu! StartBreak()
 		echo "Invalid Pomodoro Path"
 	endif	
 endfunction
+
+
+
 

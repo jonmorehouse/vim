@@ -142,6 +142,9 @@ noremap <Leader>ss :wall<CR>
 " initialize exit shortcut!!
 noremap <Leader>x :call Close()<CR>
 
+" intialize path shortcuts
+
+
 """""""""
 """""""""
 "	Initialize Buffer shortcuts
@@ -163,6 +166,20 @@ noremap <Leader>b7 :b7<CR>
 noremap <Leader>b8 :b8<CR>
 noremap <Leader>b9 :b9<CR>
 
+
+
+
+"""""""""
+"""""""""
+" 	 Initialize Path Shortcuts
+"""""""""
+"""""""""
+map <Leader>tc :call UpdatePath()<CR>
+map <Leader>tf :call UpdatePathToFile()<CR>
+map <Leader>ts :call UpdateSecondaryPath()<CR>
+
+
+
 """""""""
 """""""""
 " 	 Initialize Tab Shortcuts
@@ -178,16 +195,10 @@ noremap <Leader>gp gT<CR>
 """""""""
 " now map some shortcuts to run our favorite grunt r commands (to restart
 " tasks and servers)
-noremap <Leader>r :call Grunt("r")<CR><CR>
-noremap <Leader>rr :call Grunt("rr")<CR><CR>
-
 " map up pomodoro start and stop functions
 noremap <Leader>pp :call StartPomodoro()<CR><CR>
 noremap <Leader>px :call StopPomodoro()<CR><CR>
 noremap <Leader>pb :call StartBreak()<CR><CR>
-
-" head back to the base directory with a clean buffer
-noremap <Leader>t :call CDBasePath()<CR><CR>
 
 """""""""
 """""""""
