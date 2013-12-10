@@ -39,6 +39,12 @@ Installing Command-T for Vim
 -	[Download](https://wincent.com/products/command-t)
 -	[Tutorial](http://sjk.ankeborg.nu/2012/12/29/how-to-install-command-t-for-vim-on-mac-os-x.html)
 
+Installing Clang_complete for Vim
+-
+
+-	[Download](http://www.vim.org/scripts/download_script.php?src_id=19588)
+-	`vim clang_complete.vmb -c 'so %' -c 'q'`
+
 Vim Tips
 =
 

@@ -223,5 +223,5 @@ nmap Q gqap
 " now lets actually call the global vimrc file at all times
 call NewSession()
 
-
+set modifiable
 
