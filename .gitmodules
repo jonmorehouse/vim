@@ -58,6 +58,3 @@
 [submodule "bundle/vim-ios"]
 	path = bundle/vim-ios
 	url = https://github.com/eraserhd/vim-ios
-[submodule "bundle/clang_complete"]
-	path = bundle/clang_complete
-	url = https://github.com/Rip-Rip/clang_complete
