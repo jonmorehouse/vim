@@ -5,7 +5,7 @@
 """""""""
 
 " go into second path
-ru! CDSecondaryPath()
+fu! CDSecondaryPath()
 
 	if !exists("g:secondaryPath")	
 	
@@ -17,9 +17,7 @@ ru! CDSecondaryPath()
 
 endfunction
 
-" update the base path
-fu! CDBasePath()
-	
+
 " do nothing if the basePath dt reset path to the current path
 " this is useful for setting the path of tests to be run when you are working
 " on various files 
@@ -47,7 +45,9 @@ fu! UpdatePathToFile()
 
 endfunction
 
-esn't exist
+" update the base path
+fu! CDBasePath()
+
 	if !exists("g:basePath")
 		
 		return
