@@ -141,6 +141,29 @@ fu! Shell(command)
 
 endfunction
 
+fu! RunRakeCommand()
+
+	if !exists("g:currentPath")
+	
+		let g:currentPath="."
+	endif
+
+	" check to see if we have specified which rake command we want to run
+	if !exists("g:rakeCommand")
+
+		let g:rakeCommand = "-A"
+	endif
+	
+	" now initialize the command that will be run -- note that this
+	" command actually picks up on the correct gemset / ruby version
+	let command = "rake " . g:rakeCommand	
+
+	" now call the command that is needed to be run here
+	call CleanShell(command)
+
+
+endfunction
+
 fu! RunFabCommand()
 
 	" make sure that we have the current path set to ensure that errors

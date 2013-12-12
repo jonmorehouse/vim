@@ -58,3 +58,6 @@
 [submodule "bundle/vim-ios"]
 	path = bundle/vim-ios
 	url = https://github.com/eraserhd/vim-ios
+[submodule "bundle/vim-kiwi"]
+	path = bundle/vim-kiwi
+	url = https://github.com/vim-scripts/kiwi.vim
