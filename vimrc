@@ -78,6 +78,12 @@ set showmatch
 " check out the matching time / responsiveness for brackets in vim etc
 set matchtime=1
 
+" declard custom filetypes for odd extensions
+au BufNewFile,BufRead *.gyp set filetype=json
+" Declare the default file type for files with no extensions
+au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
+
+
 """"""""
 """"""""
 "	Intialize vim hacks

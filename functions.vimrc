@@ -151,7 +151,7 @@ fu! RunRakeCommand()
 	" check to see if we have specified which rake command we want to run
 	if !exists("g:rakeCommand")
 
-		let g:rakeCommand = "-A"
+		let g:rakeCommand = "--tasks"
 	endif
 	
 	" now initialize the command that will be run -- note that this
