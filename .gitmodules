@@ -61,3 +61,9 @@
 [submodule "bundle/vim-kiwi"]
 	path = bundle/vim-kiwi
 	url = https://github.com/vim-scripts/kiwi.vim
+[submodule "bundle/vim-objc"]
+	path = bundle/vim-objc
+	url = git@github.com:b4winckler/vim-objc.git
+[submodule "bundle/vim-cucumber"]
+	path = bundle/vim-cucumber
+	url = http://github.com/tpope/vim-cucumber
