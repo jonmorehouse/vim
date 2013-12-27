@@ -19,20 +19,6 @@ if $GOROOT != ""
 endif
 
 
-"""""""""
-"""""""""
-"	 Initialize Vim Themes / Colors
-"""""""""
-"""""""""
-
-" Initialize color scheme for application
-syntax on
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
-"colors monokai
-let g:molokai_original = 1
-
 
 """""""""
 """""""""
@@ -97,6 +83,19 @@ autocmd BufEnter * silent! lcd %:p:h
 
 """""""""
 """""""""
+"	 Initialize Vim Themes / Colors
+"""""""""
+"""""""""
+
+" Initialize color scheme for application
+syntax enable
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
+
+"""""""""
+"""""""""
 " 	Initialize general commands mapped off  
 """""""""
 """""""""
@@ -115,7 +114,7 @@ command! P r !pbpaste
 " set up and alias to help with saving
 command! W w
 " source our vimrc and reload everything
-command! S source $HOME/.vimrc
+command! S silent! :call Reload()
 
 " save a file that requires sudo saving etc but wasn't opened under sudo
 command! WW :w !sudo tee %
@@ -233,4 +232,3 @@ nmap Q gqap
 call NewSession()
 
 set modifiable
-

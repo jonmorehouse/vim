@@ -64,6 +64,16 @@ endfunction
 "        GENERAL UTILITIES 
 """""""""
 """""""""
+fu! Reload()
+
+	set autoread
+
+	:so $HOME/.vimrc
+
+	:call LocalVimrc()
+	
+endfunction
+
 " local.vimrc override!
 fu! LocalVimrc()
 	
