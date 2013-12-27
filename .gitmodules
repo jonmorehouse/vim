@@ -67,3 +67,6 @@
 [submodule "bundle/vim-cucumber"]
 	path = bundle/vim-cucumber
 	url = http://github.com/tpope/vim-cucumber
+[submodule "bundle/gyp.vim"]
+	path = bundle/gyp.vim
+	url = https://github.com/kelan/gyp.vim
