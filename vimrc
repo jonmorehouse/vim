@@ -80,10 +80,9 @@ set matchtime=1
 
 " declard custom filetypes for odd extensions
 au BufNewFile,BufRead Podfile set filetype=ruby
-au BufNewFile,BufRead *.gyp set filetype=json
 au BufNewFile,BufRead *.m set filetype=objc
 au BufNewFile,BufRead *.h set filetype=objc
-"au Bufread,BufNewFile *.feature set filetype=gherkin
+au BufNewFile,BufRead *.pch set filetype=cpp
 
 " Declare the default file type for files with no extensions
 au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
