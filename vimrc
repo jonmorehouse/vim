@@ -65,9 +65,8 @@ set showmatch
 set matchtime=1
 
 " declard custom filetypes for odd extensions
-au BufNewFile,BufRead Podfile set filetype=ruby
-au BufNewFile,BufRead *.m set filetype=objc
-au BufNewFile,BufRead *.h set filetype=objc
+au BufNewFile,BufRead Podfile,Gemfile set filetype=ruby
+au BufNewFile,BufRead *.m,*.h set filetype=objc
 au BufNewFile,BufRead *.pch set filetype=cpp
 
 " Declare the default file type for files with no extensions
