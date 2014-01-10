@@ -186,6 +186,11 @@ map <Leader>tf :call UpdatePathToFile()<CR>
 map <Leader>ts :call UpdateSecondaryPath()<CR>
 
 
+""""""""
+""""""""
+""""""""
+map <Leader>t :call CommandTWrapper()<CR>
+
 
 """""""""
 """""""""

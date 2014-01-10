@@ -3,6 +3,20 @@
 "	 PATH UTILTIES
 """"""""
 """""""""
+" commandTWrapper to always call our base path
+fu! CommandTWrapper()
+
+	if !exists("g:basePath")
+
+		:CommandT
+
+	else
+
+		let command=":CommandT " . g:basePath
+		execute command
+	endif
+
+endfunction
 
 " go into second path
 fu! CDSecondaryPath()
