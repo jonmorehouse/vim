@@ -73,3 +73,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git@github.com:wincent/Command-T.git
+[submodule "bundle/vim-seek"]
+	path = bundle/vim-seek
+	url = git@github.com:goldfeld/vim-seek.git
