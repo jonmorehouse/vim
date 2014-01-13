@@ -133,6 +133,22 @@ fu! NewSession()
 	endif
 endfunction
 
+"""""""""
+"""""""""
+"        File Utilities
+"""""""""
+"""""""""
+fu! ConfigureTabs(spaces)
+
+	set tabstop=2
+	set shiftwidth=2
+	set softtabstop=2
+	set expandtab 
+
+	retab
+
+endfunction
+
 
 """""""""
 """""""""
@@ -212,52 +228,6 @@ fu! RunFabCommand()
 
 	" now lets actually execute the function  command that we created!
 	call CleanShell(command)
-endfunction
-
-
-
-
-"""
-"""
-""" Pomodoro Functions
-"""
-"""
-" start a pomodoro!
-fu! StopPomodoro()
-
-	" generate proper commands for deleting existing processes
-	let pid = system("ps -a | grep pmd | grep -v grep | awk '{ print $1 }'")
-
-	" make sure the pid is not null
-	if pid != ""
-
-		execute "! kill " . pid
-
-	endif
-endfunction
-
-" Relies upon pomodoro program path being set as an environment variable
-fu! StartPomodoro()
-
-	if $PMDPATH != "" && filereadable($PMDPATH)
-
-		" start the pomodoro program using the pmdpath to the script
-		execute "! " . $PMDPATH 
-	else
-		echo "Invalid Pomodoro Path"
-	endif	
-endfunction
-
-" Relies upon pomodoro program path being set as an environment variable
-fu! StartBreak()
-
-	if $PMDPATH != "" && filereadable($PMDPATH)
-
-		" start the pomodoro program using the pmdpath to the script
-		execute "! " . $PMDPATH . " break"
-	else
-		echo "Invalid Pomodoro Path"
-	endif	
 endfunction
 
 

@@ -1,6 +1,6 @@
 """""""""
 """""""""
-"	 Initialize our bundles and pathogen for loading them up
+"	  PRELOAD SECTION - Initialize our bundles and pathogen for loading them up
 """""""""
 """""""""
 "load up our bundle loaders!
@@ -19,16 +19,13 @@ if $GOROOT != ""
 endif
 
 
-
 """""""""
 """""""""
 "	 Iniitalize general vim settings
 """""""""
 """""""""
 
-"help with file types
-filetype plugin indent on
-filetype plugin on
+
 " make buffers hide instead of close
 set hidden
 "don't wrap lines
@@ -63,14 +60,7 @@ set showmatch
 
 " check out the matching time / responsiveness for brackets in vim etc
 set matchtime=1
-
-" declard custom filetypes for odd extensions
-au BufNewFile,BufRead Podfile,Gemfile set filetype=ruby
-au BufNewFile,BufRead *.m,*.h set filetype=objc
-au BufNewFile,BufRead *.pch set filetype=cpp
-
-" Declare the default file type for files with no extensions
-au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
+set modifiable
 
 """"""""
 """"""""
@@ -92,141 +82,15 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
-
 """""""""
 """""""""
-" 	Initialize general commands mapped off  
+"	 Load Project Files for configuration
 """""""""
 """""""""
-"""""""""
-
-"set whther or not to highlight searches
-"set nohlsearch
-"http://vim.wikia.com/wiki/Mac_OS_X_clipboard_sharing:
-" now create a command to clear the highlighting
-command! C let @/=""
-
-" set up some mac copy paste elements
-command! -range Y  w !pbcopy
-command! P r !pbpaste
-
-" set up and alias to help with saving
-command! W w
-" source our vimrc and reload everything
-command! S silent! :call Reload()
-
-" save a file that requires sudo saving etc but wasn't opened under sudo
-command! WW :w !sudo tee %
-
-" new tab shortcut
-command! T :tabedit
-
-""""""""
-""""""""
-"	 Custom Function Command Mappings
-""""""""
-""""""""
 source $HOME/.functions.vimrc
-
-" update the pomodoro start path
-command! PMD :! $PMDPATH start
-
-" reset the basepath
-command! E :call CDBasePath()
-command! EE :call CDSecondaryPath()
-
-"""""""""
-"""""""""
-"	Initialize leader commands
-"""""""""
-"""""""""
-
-let mapleader = ","
-" initialize save 
-noremap <Leader>s :wall<CR>
-noremap <Leader>ss :wall<CR>
-
-" initialize exit shortcut!!
-noremap <Leader>x :call Close()<CR>
-
-" Greatest life saver ever!!! -- copy directly to mac clipboard from visual
-" selection
-" http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
-noremap <Leader>y y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:bdelete!<CR>
-
-"""""""""
-"""""""""
-"	Initialize Buffer shortcuts
-"""""""""
-"""""""""
-noremap <Leader>bb :buffers<CR>
-noremap <Leader>bp :bp<CR>
-noremap <Leader>bn :bn<CR>
-noremap <Leader>bd :bd<CR>
-
-" commands for switching buffers quicker
-noremap <Leader>b1 :b1<CR>
-noremap <Leader>b2 :b2<CR>
-noremap <Leader>b3 :b3<CR>
-noremap <Leader>b4 :b4<CR>
-noremap <Leader>b5 :b5<CR>
-noremap <Leader>b6 :b6<CR>
-noremap <Leader>b7 :b7<CR>
-noremap <Leader>b8 :b8<CR>
-noremap <Leader>b9 :b9<CR>
-
-
-
-
-"""""""""
-"""""""""
-" 	 Initialize Path Shortcuts
-"""""""""
-"""""""""
-map <Leader>tc :call UpdatePath()<CR>
-map <Leader>tf :call UpdatePathToFile()<CR>
-map <Leader>ts :call UpdateSecondaryPath()<CR>
-
-
-""""""""
-""""""""
-""""""""
-map <Leader>t :call CommandTWrapper()<CR>
-
-
-"""""""""
-"""""""""
-" 	 Initialize Tab Shortcuts
-"""""""""
-"""""""""
-noremap <Leader>gn gt<CR>
-noremap <Leader>gp gT<CR>
-
-"""""""""
-"""""""""
-"	Initialize workflow shortcuts
-"""""""""
-"""""""""
-" now map some shortcuts to run our favorite grunt r commands (to restart
-" tasks and servers)
-" map up pomodoro start and stop functions
-noremap <Leader>pp :call StartPomodoro()<CR><CR>
-noremap <Leader>px :call StopPomodoro()<CR><CR>
-noremap <Leader>pb :call StartBreak()<CR><CR>
-
-"""""""""
-"""""""""
-"	 Initialize global aliases / changes
-"""""""""
-"""""""""
-" remove the remapping of the ;
-"noremap ; :
-
-" formatting helpers
-vmap Q gq
-nmap Q gqap
-
-
+source $HOME/.filetypes.vimrc
+source $HOME/.commands.vimrc
+source $HOME/.leader_commands.vimrc
 
 """""""""
 """""""""
@@ -236,6 +100,4 @@ nmap Q gqap
 
 " now lets actually call the global vimrc file at all times
 call NewSession()
-
-set modifiable
 
