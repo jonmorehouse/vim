@@ -40,7 +40,7 @@ au BufNewFile,BufRead *.pch set filetype=cpp
 """""""""
 " Vimrc files
 au BufNewFile,BufRead *.vimrc set filetype=vim
-au BufNewFile,BufRead .shell_config set filetype=bash
+au BufNewFile,BufRead .shell_config set filetype=sh
 
 
 """""""""
