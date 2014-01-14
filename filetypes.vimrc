@@ -48,10 +48,11 @@ au BufNewFile,BufRead .shell_config set filetype=sh
 "	 Markdown files / markdown-like files
 """""""""
 """""""""
-au BufNewFile,BufRead GHI_ISSUE* call MarkdownConfig()
+au BufRead,BufNewFile * if expand('%') =~ "GHI_ISSUE*" |  call MarkdownConfig() | endif
 au BufNewFile,BufRead *.md call MarkdownConfig()
 function MarkdownConfig()
 
+	set filetype=markdown
 	set wrap
 	call ConfigureTabs(2)
 
