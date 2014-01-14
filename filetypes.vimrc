@@ -45,9 +45,10 @@ au BufNewFile,BufRead .shell_config set filetype=sh
 
 """""""""
 """""""""
-"	 Markdown files
+"	 Markdown files / markdown-like files
 """""""""
 """""""""
+au BufNewFile,BufRead GHI_ISSUE* call MarkdownConfig()
 au BufNewFile,BufRead *.md call MarkdownConfig()
 function MarkdownConfig()
 
