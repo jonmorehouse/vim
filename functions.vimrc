@@ -139,10 +139,10 @@ endfunction
 """""""""
 """""""""
 fu! ConfigureTabs(spaces)
-
-	set tabstop=spaces
-	set shiftwidth=spaces
-	set softtabstop=spaces
+	
+	execute "set tabstop=".a:spaces
+	execute "set shiftwidth=".a:spaces
+	execute "set softtabstop=".a:spaces
 	set expandtab 
 
 	retab
@@ -243,7 +243,5 @@ fu! RunFabCommand()
 	" now lets actually execute the function  command that we created!
 	call CleanShell(command)
 endfunction
-
-
 
 
