@@ -161,6 +161,8 @@ fu! MarkdownHeader(character)
 	" execute this command as needed
 	:execute command
 
+	:execute "set filetype=markdown"
+
 endfunction
 
 
