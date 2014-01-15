@@ -149,6 +149,20 @@ fu! ConfigureTabs(spaces)
 
 endfunction
 
+" append markdown headers onto the next line 
+fu! MarkdownHeader(character)
+
+	" grab the quantity of the elements to insert
+	let a:number=strlen(getline("."))
+	
+	" escape 28 i letter escape escape
+	let command="normal!\<esc>o\<esc>".a:number."i".a:character."\<esc>"
+
+	" execute this command as needed
+	:execute command
+
+endfunction
+
 
 """""""""
 """""""""

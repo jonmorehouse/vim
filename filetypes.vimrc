@@ -42,7 +42,13 @@ au BufNewFile,BufRead *.pch set filetype=cpp
 au BufNewFile,BufRead *.vimrc set filetype=vim
 au BufNewFile,BufRead .shell_config set filetype=sh
 au BufRead,BufNewFile *.exports set filetype=sh
-au BufNewFile,BufRead * if expand('%') =~ ".exports" | set filetype=sh
+au BufNewFile,BufRead * if expand('%') =~ ".exports" | call ExportsConfig() | endif
+function ExportsConfig()
+
+	set filetype=sh
+
+endfunction
+
 
 """""""""
 """""""""
@@ -55,6 +61,8 @@ function MarkdownConfig()
 
 	set filetype=markdown
 	set wrap
+	noremap <Leader>m :call MarkdownHeader("-")<CR>
+	noremap <Leader>mm :call MarkdownHeader("=")<CR>
 	call ConfigureTabs(2)
 
 endfunction
