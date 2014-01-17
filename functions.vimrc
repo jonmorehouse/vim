@@ -128,8 +128,7 @@ fu! NewSession()
 
 		" always go into directory mode
 		" call this silently!!
-		silent :call CDBasePath()
-
+		:call CDBasePath()
 	endif
 endfunction
 
