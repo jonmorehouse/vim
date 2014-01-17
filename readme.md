@@ -1,66 +1,31 @@
 Jon Morehouse's Vim Configuration
-=
+=================================
 
-Installation
--
+* this is mac friendly for now but should work on other systems as well
 
-- 1.) Install dependencies
-    
-    `sudo apt-get install vim vim-nox git`
-  
-- 2.) Clone the application 
-    
-    `Git clone --recursive http://github.com/MorehouseJ09/vim.git`
+Install Vim
+-----------
 
-- 3.) Make sure install script has executable privileges
-
-    `chmod +x install.sh`
-
-- 4.) Run the install script and it will install vimrc
-  
-    `./install.sh`
-  
-
-Submodule Tips
--
-
-- 1.) Update and iniitalize all of the gitmodules that weren't initialized when we cloned the repository
-
-  `git submodule update --init --recursive`
-
-- 2.) Apply a function to each of the submodules
-
-  `git submodule foreach git fetch`
-
-
-Installing Command-T for Vim
--
-
-- [Download](https://wincent.com/products/command-t)
-- [Tutorial](http://sjk.ankeborg.nu/2012/12/29/how-to-install-command-t-for-vim-on-mac-os-x.html)
+* install vim (make sure python / ruby compilation flags as well) 
 
 ```
-  cd bundle/command-t 
-  make
-  vim -c 'so % | q' command-t.vba
-  cd ../../ruby/command-t
-  ruby extconf.rb
-  make
+  brew install vim 
 ```
 
-Installing Clang_complete for Vim
--
+* clone project  
+```
+  git clone git@github.com:jonmorehouse/vim-config 
+```
+
+* install project
+```
+  ./install
+```
+
+
+Installing Clang_complete for Vim (Mac Only)
+--------------------------------------------
 
 - [Download](http://www.vim.org/scripts/download_script.php?src_id=19588)
 - `vim clang_complete.vmb -c 'so %' -c 'q'`
 
-Vim Tips
-=
-
-- Copy to the mac clipboard
-
-    `w !pbcopy`
-
-- Read from the mac clipboard
-
-    `r ! pbpaste`
