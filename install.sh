@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install all submodule dependencies
-git submodule foreach --recursive git submodule update --init
+#git submodule foreach --recursive git submodule update --init
 
 # make this script callable from anywhere!
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -16,7 +16,11 @@ done
 # install command-t
 cd bundle/command-t 
 make
-vim -c 'so % | quitall!' command-t.vba
+vim -c 'silent so % | d | d | quitall!' command-t.vba
 cd ../../ruby/command-t
 ruby extconf.rb
 make
+cd $DIR
+
+
+
