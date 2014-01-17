@@ -67,8 +67,9 @@ fu! CDBasePath()
 		return
 	endif
 
-	" if it does exist then we want to open the base dir 
-	execute "edit " . g:basePath
+	execute "edit " . g:basePath	
+
+
 endfunction
 
 
@@ -128,11 +129,12 @@ fu! NewSession()
 
 		" always go into directory mode
 		" call this silently!!
-		:call CDBasePath()
+		Explore
 
-	elseif !filereadable(argv()[0])
-
-		:call CDBasePath()
+	" vim will resolve . or a directory to the absolute path
+	elseif isdirectory(argv()[0])
+		
+		Explore
 	endif
 endfunction
 
@@ -247,5 +249,4 @@ fu! RunFabCommand()
 	" now lets actually execute the function  command that we created!
 	call CleanShell(command)
 endfunction
-
 

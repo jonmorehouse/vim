@@ -30,6 +30,8 @@ command! WW :w !sudo tee %
 " new tab shortcut
 command! T :tabedit
 
+command! Q :quitall!
+
 """"""""
 """"""""
 "	 Custom Function Command Mappings

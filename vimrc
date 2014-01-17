@@ -90,3 +90,4 @@ source $HOME/.leader_commands.vimrc
 " now lets actually call the global vimrc file at all times
 autocmd VimEnter * call NewSession()
 
+
