@@ -124,10 +124,14 @@ fu! NewSession()
 
 	" if we don't have any arguments passed in, then open the directory in
 	" a buffer
-	if len(argv()) == 0
+	if len(argv()) == 0 
 
 		" always go into directory mode
 		" call this silently!!
+		:call CDBasePath()
+
+	elseif !filereadable(argv()[0])
+
 		:call CDBasePath()
 	endif
 endfunction
