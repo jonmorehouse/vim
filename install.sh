@@ -9,7 +9,8 @@ do
 	ln -f -s $DIR/$i $HOME/.$i
 done
 
-
+# now create the vimball 
+cd bundle/command-t && make
 
 
 
