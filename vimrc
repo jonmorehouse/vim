@@ -11,21 +11,11 @@ execute pathogen#helptags()
 
 """""""""
 """""""""
-"	 Initialize any settings that need to be safely overridden later
-"""""""""
-"""""""""
-if $GOROOT != ""
-	set rtp+=$GOROOT/misc/vim		
-endif
-
-
-"""""""""
-"""""""""
 "	 Iniitalize general vim settings
 """""""""
 """""""""
-
-
+" initialize backspace functinoality -- defaults are different with brewed vim
+set backspace=indent,eol,start
 " make buffers hide instead of close
 set hidden
 "don't wrap lines
@@ -97,7 +87,6 @@ source $HOME/.leader_commands.vimrc
 "	 Post Hooks for vim loading
 """""""""
 """""""""
-
 " now lets actually call the global vimrc file at all times
 autocmd VimEnter * call NewSession()
 
