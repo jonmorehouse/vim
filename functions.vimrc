@@ -234,9 +234,8 @@ fu! RunFabCommand()
 	endif
 
 	" set appropriate variables for calling nose functions!
-	let baseDir = "/Users/MorehouseJ09/Documents/production_development/thestreetpicks/email_app"
-	let fab = baseDir . "/bin/fab" 
-	let virtualEnv = baseDir . "/bin/activate"
+	let fab = g:baseDir . "/bin/fab" 
+	let virtualEnv = g:baseDir . "/bin/activate"
 	let fabCommand = "create_server"
 
 	" run the command as necessary
