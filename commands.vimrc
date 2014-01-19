@@ -15,10 +15,6 @@ nmap Q gqap
 " now create a command to clear the highlighting
 command! C let @/=""
 
-" set up some mac copy paste elements
-command! -range Y  w !pbcopy
-command! P r !pbpaste
-
 " set up and alias to help with saving
 command! W w
 " source our vimrc and reload everything

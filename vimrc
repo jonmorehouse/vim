@@ -9,6 +9,14 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 execute pathogen#helptags()
 
+
+"""""""""
+"""""""""
+"	 Global variables 
+"""""""""
+"""""""""
+let g:chrome="/Applications/Google Chrome Canary.app/"
+
 """""""""
 """""""""
 "	 Iniitalize general vim settings
@@ -20,8 +28,10 @@ set backspace=indent,eol,start
 set hidden
 "don't wrap lines
 set nowrap
-"Set the vim clipboard
-set clipboard=unnamed
+
+"Set the vim clipboard -- uncomment if you want all unnamed yanks going to the
+"mac clipboard :(
+"set clipboard=unnamed
 set autoindent
 set copyindent
 "always show the line numbers
@@ -89,5 +99,4 @@ source $HOME/.leader_commands.vimrc
 """""""""
 " now lets actually call the global vimrc file at all times
 autocmd VimEnter * call NewSession()
-
 

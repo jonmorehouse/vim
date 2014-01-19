@@ -55,19 +55,14 @@ map <Leader>t :call CommandTWrapper()<CR>
 
 """""""""
 """""""""
-" 	 Initialize Tab Shortcuts
-"""""""""
-"""""""""
-noremap <Leader>gn gt<CR>
-noremap <Leader>gp gT<CR>
-
-"""""""""
-"""""""""
 "	Initialize workflow shortcuts
 """""""""
 """""""""
 " now map some shortcuts to run our favorite grunt r commands (to restart
 " tasks and servers)
 " map up pomodoro start and stop functions
-noremap <Leader>pp :call CleanShell("pmd 2> /tmp/null")<CR><CR>
+noremap <Leader>pp :call CleanShell("pmd >> /tmp/null 2&> /tmp/null")<CR><CR>
+noremap <Leader>g :call Google()<CR><CR>
+vnoremap <Leader>gg :call VGoogle()<CR><CR>
+
 

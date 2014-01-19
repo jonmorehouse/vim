@@ -76,3 +76,6 @@
 [submodule "bundle/vim-seek"]
 	path = bundle/vim-seek
 	url = git@github.com:goldfeld/vim-seek.git
+[submodule "bundle/texconv.vim"]
+	path = bundle/texconv.vim
+	url = https://github.com/pydave/textconv.vim

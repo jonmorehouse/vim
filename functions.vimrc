@@ -1,5 +1,22 @@
 """""""""
 """""""""
+"	  UTILITY FUNCTIONS
+""""""""
+"""""""""
+fu! GetVisualSelection()
+	
+	let [lnum1, col1] = getpos("'<")[1:2]
+	let [lnum2, col2] = getpos("'>")[1:2]
+	let lines = getline(lnum1, lnum2)
+	let lines[-1] = lines[-1][: col2 - 2]
+	let lines[0] = lines[0][col1 - 1:]
+	return join(lines, "\n")
+
+endfunction
+
+
+"""""""""
+"""""""""
 "	 PATH UTILTIES
 """"""""
 """""""""
@@ -250,3 +267,36 @@ fu! RunFabCommand()
 	call CleanShell(command)
 endfunction
 
+
+
+"""""""""
+"""""""""
+"        Browser Hooks
+"""""""""
+"""""""""
+fu! Google(...)
+
+	if !exists("a:query")
+
+		let query = expand("<cword>")
+
+	else
+
+		let query = a:query
+	endif
+		
+	" build query and open with google 
+	let url = "http://www.google.com/search?q=" . query
+	let command = "open -a \"" . g:chrome . "\" \"".url."\""
+	echo command
+	call CleanShell(command)
+
+endfunction
+
+fu! VGoogle()
+	
+	let query = GetVisualSelection()
+
+	call Google(query)
+	
+endfunction
