@@ -239,7 +239,6 @@ fu! RunRakeCommand()
 	" now call the command that is needed to be run here
 	call CleanShell(command)
 
-
 endfunction
 
 fu! RunFabCommand()

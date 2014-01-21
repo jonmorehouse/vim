@@ -28,7 +28,8 @@ set backspace=indent,eol,start
 set hidden
 "don't wrap lines
 set nowrap
-
+" mutt line settings -- this could break other things. Not sure
+setlocal fo+=aw
 "Set the vim clipboard -- uncomment if you want all unnamed yanks going to the
 "mac clipboard :(
 "set clipboard=unnamed
