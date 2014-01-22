@@ -49,6 +49,8 @@ function ExportsConfig()
 
 endfunction
 
+au BufNewFile,BufRead *.yml call ConfigureTabs(2)
+
 
 """""""""
 """""""""
