@@ -74,7 +74,7 @@ endfunction
 "	  Python Project files
 """""""""
 """""""""
-au BufNewFile, BufRead *py call PythonConfig()
+au BufNewFile,BufRead *py call PythonConfig()
 function PythonConfig()
 
 	set filetype=python
@@ -83,3 +83,14 @@ function PythonConfig()
 endfunction
 
 
+
+"""""""""
+"""""""""
+"	  Haskell Project Files
+"""""""""
+"""""""""
+au BufNewFile,BufRead *.hs call HaskellConfig()
+function HaskellConfig()
+
+	set commentstring="--"
+endfunction
