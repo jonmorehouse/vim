@@ -29,7 +29,7 @@ set hidden
 "don't wrap lines
 set nowrap
 " mutt line settings -- this could break other things. Not sure
-setlocal fo+=aw
+"setlocal fo+=aw
 "Set the vim clipboard -- uncomment if you want all unnamed yanks going to the
 "mac clipboard :(
 "set clipboard=unnamed
@@ -62,6 +62,10 @@ set showmatch
 " check out the matching time / responsiveness for brackets in vim etc
 set matchtime=1
 set modifiable
+
+" formatting helpers
+vmap Q gq
+nmap Q gqap
 
 """"""""
 """"""""
