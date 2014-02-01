@@ -82,3 +82,6 @@
 [submodule "bundle/vim-shim"]
 	path = bundle/vim-shim
 	url = https://github.com/vim-scripts/Superior-Haskell-Interaction-Mode-SHIM
+[submodule "bundle/vim-golang"]
+	path = bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang
