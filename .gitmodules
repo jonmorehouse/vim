@@ -85,3 +85,6 @@
 [submodule "bundle/vim-golang"]
 	path = bundle/vim-golang
 	url = https://github.com/jnwhiteh/vim-golang
+[submodule "bundle/vim-loremipsum"]
+	path = bundle/vim-loremipsum
+	url = https://github.com/vim-scripts/loremipsum
