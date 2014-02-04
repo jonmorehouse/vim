@@ -79,6 +79,7 @@ function PythonConfig()
 
 	set filetype=python
 	call ConfigureTabs(4)
+	noremap <Leader>rr :call CleanShell("python " . @%)<CR>
 
 endfunction
 
@@ -93,4 +94,7 @@ au BufNewFile,BufRead *.hs call HaskellConfig()
 function HaskellConfig()
 
 	set commentstring="--"
+	noremap <Leader>rr :call CleanShell("runghc " . @%)<CR>
+
 endfunction
+
