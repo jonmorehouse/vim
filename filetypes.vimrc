@@ -83,7 +83,18 @@ function PythonConfig()
 
 endfunction
 
+"""""""""
+"""""""""
+"	  Go Project Files
+"""""""""
+"""""""""
+au BufNewFile,BufRead *go call GoConfig()
+function GoConfig()
 
+	set filetype=go
+	noremap <Leader>rr :call CleanShell("go run " . @%)<CR>
+
+endfunction
 
 """""""""
 """""""""
