@@ -22,8 +22,8 @@ noremap <Leader>y y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:bdelete!<CR>
 """""""""
 """""""""
 noremap <Leader>bb :buffers<CR>
-noremap <Leader>bp :bp<CR>
-noremap <Leader>bn :bn<CR>
+noremap <Leader>bp :bn<CR>
+noremap <Leader>bn :bp<CR>
 noremap <Leader>bd :bd<CR>
 
 " commands for switching buffers quicker
