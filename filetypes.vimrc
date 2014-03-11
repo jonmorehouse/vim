@@ -16,7 +16,7 @@ au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
 """""""""
 """""""""
 " Ruby project files / settings
-au BufNewFile,BufRead rb,Podfile,Gemfile,Rakefile call RubyConfig()
+au BufNewFile,BufRead rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
 function RubyConfig()
 
 	call ConfigureTabs(2)
@@ -78,7 +78,7 @@ au BufNewFile,BufRead *py call PythonConfig()
 function PythonConfig()
 
 	set filetype=python
-	call ConfigureTabs(4)
+	call ConfigureTabs(2)
 	noremap <Leader>rr :call CleanShell("python " . @%)<CR>
 
 endfunction

@@ -278,9 +278,7 @@ fu! Google(...)
 	if !exists("a:query")
 
 		let query = expand("<cword>")
-
 	else
-
 		let query = a:query
 	endif
 		
