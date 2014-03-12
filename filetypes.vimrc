@@ -16,11 +16,23 @@ au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
 """""""""
 """""""""
 " Ruby project files / settings
-au BufNewFile,BufRead rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
+au BufNewFile,BufRead *rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
 function RubyConfig()
 
 	call ConfigureTabs(2)
 	set filetype=ruby
+
+endfunction
+
+"""""""""
+"""""""""
+"
+"""""""""
+"""""""""
+au BufNewFile,BufRead *feature call CucumberConfig()
+function CucumberConfig()
+
+	call ConfigureTabs(2)
 
 endfunction
 
