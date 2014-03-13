@@ -21,6 +21,7 @@ function RubyConfig()
 
 	call ConfigureTabs(2)
 	set filetype=ruby
+	noremap <Leader>rr :call CleanShell("ruby " . @%)<CR>
 
 endfunction
 
