@@ -134,11 +134,11 @@ endfunction
 " elements to call and set whenever we start a new function
 fu! NewSession()
 
-	" automatically load the local vimrc element if it exists
-	:call LocalVimrc()
-
 	" set the basePath
 	let g:basePath = getcwd()
+
+	" automatically load the local vimrc element if it exists
+	:call LocalVimrc()
 
 	" if we don't have any arguments passed in, then open the directory in
 	" a buffer
@@ -237,6 +237,20 @@ fu! RunRakeCommand()
 	let command = "rake " . g:rakeCommand	
 
 	" now call the command that is needed to be run here
+	call CleanShell(command)
+
+endfunction
+
+fu! CucumberRunner()
+	
+	let file=getcwd() ."/". @%
+	if exists("g:basePath") 
+	
+		let command="cd ". g:basePath ." && cucumber ". file
+	else
+		let command="cucumber ". @%
+	endif
+
 	call CleanShell(command)
 
 endfunction

@@ -33,7 +33,7 @@ au BufNewFile,BufRead *feature call CucumberConfig()
 function CucumberConfig()
 
 	call ConfigureTabs(2)
-
+	noremap <Leader>rc :call CucumberRunner()<CR>
 endfunction
 
 
