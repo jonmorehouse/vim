@@ -136,6 +136,7 @@ fu! NewSession()
 
 	" set the basePath
 	let g:basePath = getcwd()
+	echo getcwd()
 
 	" automatically load the local vimrc element if it exists
 	:call LocalVimrc()
