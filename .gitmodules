@@ -91,3 +91,6 @@
 [submodule "bundle/Dockerfile.vim"]
 	path = bundle/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim
+[submodule "bundle/vimunit"]
+	path = bundle/vimunit
+	url = git@github.com:dsummersl/vimunit.git

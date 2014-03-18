@@ -17,7 +17,7 @@ au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
 """""""""
 " Ruby project files / settings
 au BufNewFile,BufRead *rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
-function RubyConfig()
+function! RubyConfig()
 
 	call ConfigureTabs(2)
 	set filetype=ruby
@@ -31,7 +31,7 @@ endfunction
 """""""""
 """""""""
 au BufNewFile,BufRead *feature call CucumberConfig()
-function CucumberConfig()
+function! CucumberConfig()
 
 	call ConfigureTabs(2)
 	noremap <Leader>rc :call CucumberRunner()<CR>
@@ -55,15 +55,14 @@ au BufNewFile,BufRead *.pch set filetype=cpp
 au BufNewFile,BufRead *.vimrc set filetype=vim
 au BufNewFile,BufRead .shell_config set filetype=sh
 au BufRead,BufNewFile *.exports set filetype=sh
-au BufNewFile,BufRead * if expand('%') =~ ".exports" | call ExportsConfig() | endif
-function ExportsConfig()
+au BufNewFile,BufRead * if expand('%') =~ ".exports" | call EnvConfig() | endif
+function! EnvConfig()
 
 	set filetype=sh
 
 endfunction
 
 au BufNewFile,BufRead *.yml call ConfigureTabs(2)
-
 
 """""""""
 """""""""
@@ -72,7 +71,7 @@ au BufNewFile,BufRead *.yml call ConfigureTabs(2)
 """""""""
 au BufRead,BufNewFile * if expand('%') =~ "GHI_ISSUE*" |  call MarkdownConfig() | endif
 au BufNewFile,BufRead *.md call MarkdownConfig()
-function MarkdownConfig()
+function! MarkdownConfig()
 
 	set filetype=markdown
 	set wrap
@@ -88,7 +87,7 @@ endfunction
 """""""""
 """""""""
 au BufNewFile,BufRead *py call PythonConfig()
-function PythonConfig()
+function! PythonConfig()
 
 	set filetype=python
 	call ConfigureTabs(2)
@@ -102,7 +101,7 @@ endfunction
 """""""""
 """""""""
 au BufNewFile,BufRead *go call GoConfig()
-function GoConfig()
+function! GoConfig()
 
 	set filetype=go
 	noremap <Leader>rr :call CleanShell("go run " . @%)<CR>
@@ -115,7 +114,7 @@ endfunction
 """""""""
 """""""""
 au BufNewFile,BufRead *.hs call HaskellConfig()
-function HaskellConfig()
+function! HaskellConfig()
 
 	set commentstring="--"
 	noremap <Leader>rr :call CleanShell("runghc " . @%)<CR>

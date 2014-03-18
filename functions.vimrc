@@ -131,31 +131,6 @@ fu! Close()
 	endif
 endfunction
 
-" elements to call and set whenever we start a new function
-fu! NewSession()
-
-	" set the basePath
-	let g:basePath = getcwd()
-	echo getcwd()
-
-	" automatically load the local vimrc element if it exists
-	:call LocalVimrc()
-
-	" if we don't have any arguments passed in, then open the directory in
-	" a buffer
-	if len(argv()) == 0 
-
-		" always go into directory mode
-		" call this silently!!
-		Explore
-
-	" vim will resolve . or a directory to the absolute path
-	elseif isdirectory(argv()[0])
-		
-		Explore
-	endif
-endfunction
-
 """""""""
 """""""""
 "        File Utilities

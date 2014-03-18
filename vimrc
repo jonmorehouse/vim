@@ -9,7 +9,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 execute pathogen#helptags()
 
-
 """""""""
 """""""""
 "	 Global variables 
@@ -103,5 +102,5 @@ source $HOME/.leader_commands.vimrc
 """""""""
 """""""""
 " now lets actually call the global vimrc file at all times
-autocmd VimEnter * call NewSession()
+autocmd VimEnter * call Runner#Bootstrap()
 
