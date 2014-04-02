@@ -76,7 +76,7 @@ function! MarkdownConfig()
     set wrap
     noremap <Leader>m :call MarkdownHeader("-")<CR>
     noremap <Leader>mm :call MarkdownHeader("=")<CR>
-    call ConfigureTabs(2)
+    :call ConfigureTabs(2)
 
 endfunction
 
@@ -89,7 +89,7 @@ au BufNewFile,BufRead *py call PythonConfig()
 function! PythonConfig()
 
     set filetype=python
-    call ConfigureTabs(2)
+    :call ConfigureTabs(2)
 
 endfunction
 
@@ -107,7 +107,8 @@ au BufNewFile,BufRead *.hs set commentstring="--"
 """""""""
 """""""""
 au BufNewFile,BufRead *.template set filetype=json
-
-
+au BufNewFile,BufRead *json,*.template :call ConfigureTabs(2)
+au BufNewFile,BufRead *cson set filetype=coffee
+au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureTabs(2) 
 
 
