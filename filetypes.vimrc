@@ -9,7 +9,6 @@ filetype plugin on
 " Declare the default file type for files with no extensions
 au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
 
-
 """""""""
 """""""""
 "    Ruby and ruby related file types
@@ -19,7 +18,7 @@ au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
 au BufNewFile,BufRead *rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
 function! RubyConfig()
 
-    call ConfigureTabs(2)
+    :call ConfigureTabs(2)
     set filetype=ruby
     noremap <Leader>rr :call CleanShell("ruby " . @%)<CR>
 
@@ -33,7 +32,7 @@ endfunction
 au BufNewFile,BufRead *feature call CucumberConfig()
 function! CucumberConfig()
 
-    call ConfigureTabs(2)
+    :call ConfigureTabs(2)
     noremap <Leader>rc :call CucumberRunner()<CR>
 endfunction
 
@@ -55,7 +54,7 @@ au BufNewFile,BufRead *.pch set filetype=cpp
 au BufNewFile,BufRead *.vimrc,*.vim call VimConfig()
 function! VimConfig()
     set filetype=vim
-    call ConfigureTabs(4)
+    :call ConfigureTabs(4)
 endfunction
 
 au BufNewFile,BufRead .shell_config set filetype=sh
@@ -107,8 +106,8 @@ au BufNewFile,BufRead *.hs set commentstring="--"
 """""""""
 """""""""
 au BufNewFile,BufRead *.template set filetype=json
-au BufNewFile,BufRead *json,*.template :call ConfigureTabs(2)
-au BufNewFile,BufRead *cson set filetype=coffee
+au BufNewFile,BufRead *json,*.template,*.ctemplate :call ConfigureTabs(2)
+au BufNewFile,BufRead *cson,*ctemplate set filetype=coffee
 au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureTabs(2) 
 
 
