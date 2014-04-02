@@ -1,6 +1,6 @@
 """""""""
 """""""""
-"	 Initialize leader commands
+"    Initialize leader commands
 """""""""
 """""""""
 let mapleader = ","
@@ -18,12 +18,12 @@ noremap <Leader>y y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:bdelete!<CR>
 
 """""""""
 """""""""
-"	Initialize Buffer shortcuts
+"   Initialize Buffer shortcuts
 """""""""
 """""""""
-noremap <Leader>bb :buffers<CR>
-noremap <Leader>bp :bn<CR>
-noremap <Leader>bn :bp<CR>
+noremap <Leader>bbb :buffers<CR>
+noremap <Leader>jj :BufSurfBack<CR>
+noremap <Leader>kk :BufSurfForward<CR>
 noremap <Leader>bd :bd<CR>
 
 " commands for switching buffers quicker
@@ -39,7 +39,7 @@ noremap <Leader>b9 :b9<CR>
 
 """""""""
 """""""""
-" 	 Initialize Path Shortcuts
+"    Initialize Path Shortcuts
 """""""""
 """""""""
 map <Leader>tc :call UpdatePath()<CR>
@@ -55,7 +55,7 @@ map <Leader>t :call CommandTWrapper()<CR>
 
 """""""""
 """""""""
-"	Initialize workflow shortcuts
+"   Initialize workflow shortcuts
 """""""""
 """""""""
 " now map some shortcuts to run our favorite grunt r commands (to restart

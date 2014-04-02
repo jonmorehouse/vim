@@ -94,3 +94,6 @@
 [submodule "bundle/vimunit"]
 	path = bundle/vimunit
 	url = git@github.com:dsummersl/vimunit.git
+[submodule "bundle/vim-bufsurf"]
+	path = bundle/vim-bufsurf
+	url = git@github.com:ton/vim-bufsurf

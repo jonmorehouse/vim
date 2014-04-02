@@ -71,7 +71,6 @@ nmap Q gqap
 "	Intialize vim hacks
 """"""""
 " ensure that we safely change the directory to the current buffer as changing
-" etc
 autocmd BufEnter * silent! lcd %:p:h
 
 """""""""
@@ -96,11 +95,4 @@ source $HOME/.filetypes.vimrc
 source $HOME/.commands.vimrc
 source $HOME/.leader_commands.vimrc
 
-"""""""""
-"""""""""
-"	 Post Hooks for vim loading
-"""""""""
-"""""""""
-" now lets actually call the global vimrc file at all times
-autocmd VimEnter * call Runner#Bootstrap()
 

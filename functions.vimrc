@@ -98,11 +98,11 @@ endfunction
 """""""""
 fu! Reload()
 
+	let path=@%
 	set autoread
-
 	:so $HOME/.vimrc
-
-	:call LocalVimrc()
+	call Runner#Bootstrap()
+	eval "edit ". path
 	
 endfunction
 
@@ -258,32 +258,3 @@ endfunction
 
 
 
-"""""""""
-"""""""""
-"        Browser Hooks
-"""""""""
-"""""""""
-fu! Google(...)
-
-	if !exists("a:query")
-
-		let query = expand("<cword>")
-	else
-		let query = a:query
-	endif
-		
-	" build query and open with google 
-	let url = "http://www.google.com/search?q=" . query
-	let command = "open -a \"" . g:chrome . "\" \"".url."\""
-	echo command
-	call CleanShell(command)
-
-endfunction
-
-fu! VGoogle()
-	
-	let query = GetVisualSelection()
-
-	call Google(query)
-	
-endfunction
