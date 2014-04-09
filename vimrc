@@ -95,4 +95,5 @@ source $HOME/.filetypes.vimrc
 source $HOME/.commands.vimrc
 source $HOME/.leader_commands.vimrc
 
+call ConfigureSpaces(2)
 

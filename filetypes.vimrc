@@ -18,7 +18,7 @@ au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
 au BufNewFile,BufRead *rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
 function! RubyConfig()
 
-    :call ConfigureTabs(2)
+    :call ConfigureSpaces(2)
     set filetype=ruby
     noremap <Leader>rr :call CleanShell("ruby " . @%)<CR>
 
@@ -32,7 +32,7 @@ endfunction
 au BufNewFile,BufRead *feature call CucumberConfig()
 function! CucumberConfig()
 
-    :call ConfigureTabs(2)
+    :call ConfigureSpaces(2)
     noremap <Leader>rc :call CucumberRunner()<CR>
 endfunction
 
@@ -54,13 +54,13 @@ au BufNewFile,BufRead *.pch set filetype=cpp
 au BufNewFile,BufRead *.vimrc,*.vim call VimConfig()
 function! VimConfig()
     set filetype=vim
-    :call ConfigureTabs(4)
+    :call ConfigureSpaces(4)
 endfunction
 
 au BufNewFile,BufRead .shell_config set filetype=sh
 au BufNewFile,BufRead *env,*.exports set filetype=sh 
 
-au BufNewFile,BufRead *.yml call ConfigureTabs(2)
+au BufNewFile,BufRead *.yml call ConfigureSpaces(2)
 
 """""""""
 """""""""
@@ -75,7 +75,7 @@ function! MarkdownConfig()
     set wrap
     noremap <Leader>m :call MarkdownHeader("-")<CR>
     noremap <Leader>mm :call MarkdownHeader("=")<CR>
-    :call ConfigureTabs(2)
+    :call ConfigureSpaces(2)
 
 endfunction
 
@@ -88,7 +88,7 @@ au BufNewFile,BufRead *py call PythonConfig()
 function! PythonConfig()
 
     set filetype=python
-    :call ConfigureTabs(2)
+    :call ConfigureSpaces(2)
 
 endfunction
 
@@ -106,8 +106,8 @@ au BufNewFile,BufRead *.hs set commentstring="--"
 """""""""
 """""""""
 au BufNewFile,BufRead *.template set filetype=json
-au BufNewFile,BufRead *json,*.template,*.ctemplate :call ConfigureTabs(2)
+au BufNewFile,BufRead *json,*.template,*.ctemplate :call ConfigureSpaces(2)
 au BufNewFile,BufRead *cson,*ctemplate set filetype=coffee
-au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureTabs(2) 
+au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureSpaces(2) 
 
 
