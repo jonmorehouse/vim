@@ -1,1 +1,1 @@
-/Users/MorehouseJ09/.personal.vim
+../../.personal.vim
