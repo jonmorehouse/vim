@@ -11,7 +11,7 @@ call vundle#rc()
 """
 Plugin 'gmarik/vundle'
 Plugin 'jonmorehouse/vim-runner'
-Plugin 'git:/git.wincent.com/command-t.git'
+" Plugin 'git:/git.wincent.com/command-t.git'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'scrooloose/nerdcommenter'
 

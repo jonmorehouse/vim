@@ -1,37 +1,16 @@
-Jon Morehouse's Vim Configuration
-=================================
+Vim Configuration
+=================
 
-* this is mac friendly for now but should work on other systems as well
-
-Install Vim
------------
-
-* install vim (make sure python / ruby compilation flags as well) 
-
-```
-  brew install vim 
-```
+This vim configuration lives at $HOME/.vim and is what I use as my daily development editor.
 
 Getting Started
+---------------
 
 ```
-  # clone project
-  git clone --recursive git@github.com:jonmorehouse/vim-config 
+# clone repository as well as vundle submodule
+git clone --recursive git@github.com:jonmorehouse/vim $HOME/.vim
 
-  # install all dependencies
-  vim +PluginInstall +qall
+# install all vundle dependencies
+vim +PluginInstall +qall
 
 ```
-
-* install project
-```
-  ./install
-```
-
-
-Installing Clang_complete for Vim (Mac Only)
---------------------------------------------
-
-- [Download](http://www.vim.org/scripts/download_script.php?src_id=19588)
-- `vim clang_complete.vmb -c 'so %' -c 'q'`
-
