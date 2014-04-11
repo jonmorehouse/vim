@@ -3,7 +3,7 @@
 "	      Install Vundle
 """""""""
 """""""""
-source $HOME/.vundle.vimrc
+source $HOME/.vim/src/vundle.vimrc
 
 """""""""
 """""""""
