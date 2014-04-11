@@ -1,6 +1,7 @@
 fu! BootstrapPath(path)
-  if filereadable("$HOME/.vim/src/". a:path)
-    execute "source $HOME/.vim/src/". a:path
+	let path = expand("$HOME/.vim/src/". a:path)
+  if filereadable(path)
+	  execute "source ". path
   endif
 endfunction
 

@@ -18,6 +18,15 @@ ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 
 ```
 
+Custom Configuration
+--------------------
+
+Add in local vim settings
+```
+# $HOME/.personal.vim
+map <Leader> pp echo "CUSTOM COMMAND"
+```
+
 Installing Command-T
 --------------------
 
