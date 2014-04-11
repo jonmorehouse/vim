@@ -17,3 +17,19 @@ vim +PluginInstall +qall
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 
 ```
+
+Installing Command-T
+--------------------
+
+```
+cd bundle/Command-T && vim command-t.vba -c ":so %" +qall
+cd ruby/command-t 
+ruby extconf.rb
+make
+
+# if having issues (mac) make sure you are using clang 
+# make sure environment is the same as when installing vim
+brew uninstall vim && brew install vim && ruby extconf.rb && make
+```
+
+

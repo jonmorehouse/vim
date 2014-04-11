@@ -4,5 +4,6 @@ plugin/
 bin/
 bundle/
 ruby/
+.VimballRecord
 
 
