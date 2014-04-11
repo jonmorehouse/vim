@@ -1,20 +1,9 @@
 """""""""
 """""""""
-"	  PRELOAD SECTION - Initialize our bundles and pathogen for loading them up
+"	      Install Vundle
 """""""""
 """""""""
-"load up our bundle loaders!
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-" initialize pathogen to help with bundles
-execute pathogen#infect()
-execute pathogen#helptags()
-
-"""""""""
-"""""""""
-"	 Global variables 
-"""""""""
-"""""""""
-let g:chrome="/Applications/Google Chrome Canary.app/"
+source $HOME/.vundle.vimrc
 
 """""""""
 """""""""
@@ -53,7 +42,7 @@ set noerrorbells
 set nobackup
 set noswapfile
 "http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
-" delay between leader key and second command accepting
+" delay beween leader key and second command accepting
 set timeoutlen=1000
 "http://vim.wikia.com/wiki/Moving_to_matching_braces
 set showmatch

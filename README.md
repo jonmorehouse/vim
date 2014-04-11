@@ -12,9 +12,15 @@ Install Vim
   brew install vim 
 ```
 
-* clone project  
+Getting Started
+
 ```
-  git clone git@github.com:jonmorehouse/vim-config 
+  # clone project
+  git clone --recursive git@github.com:jonmorehouse/vim-config 
+
+  # install all dependencies
+  vim +PluginInstall +qall
+
 ```
 
 * install project

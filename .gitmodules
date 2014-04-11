@@ -97,3 +97,6 @@
 [submodule "bundle/vim-bufsurf"]
 	path = bundle/vim-bufsurf
 	url = git@github.com:ton/vim-bufsurf
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+	url = git@github.com:gmarik/Vundle.vim
