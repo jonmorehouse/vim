@@ -13,4 +13,7 @@ git clone --recursive git@github.com:jonmorehouse/vim $HOME/.vim
 # install all vundle dependencies
 vim +PluginInstall +qall
 
+# symlink vimrc
+ln -sf $HOME/.vim/vimrc $HOME/.vimrc
+
 ```
