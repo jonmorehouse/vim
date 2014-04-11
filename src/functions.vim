@@ -14,7 +14,6 @@ fu! GetVisualSelection()
 
 endfunction
 
-
 """""""""
 """""""""
 "    PATH UTILTIES
