@@ -11,9 +11,16 @@ call vundle#rc()
 """
 Plugin 'gmarik/vundle'
 Plugin 'jonmorehouse/vim-runner'
-" Plugin 'git:/git.wincent.com/command-t.git'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'scrooloose/nerdcommenter'
+
+"""
+"""     NAVIGATION
+"""
+Plugin 'wincent/Command-T'
+Plugin 'goldfeld/vim-seek'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'ton/vim-bufsurf'
 
 """
 """     COLORSCHEMES
@@ -24,15 +31,6 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'sickill/vim-monokai'
 "Plugin 'vim-scripts/peaksea'
 "Plugin 'sickill/vim-sunburst'
-
-
-"""
-"""     NAVIGATION
-"""
-Plugin 'wincent/Command-T'
-Plugin 'goldfeld/vim-seek'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'ton/vim-bufsurf'
 
 """
 """     SYNTAX
