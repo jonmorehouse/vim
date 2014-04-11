@@ -5,8 +5,10 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Plugin 'gmarik/vundle'
-Plugin 'file:///Users/MorehouseJ09/Documents/programs/vim-runner'
+"Plugin 'file:///Users/MorehouseJ09/Documents/programs/vim-runner'
 
+
+Plugin 'jonmorehouse/vim-runner'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git:/git.wincent.com/command-t.git'
 Plugin 'ekalinin/Dockerfile.vim'
