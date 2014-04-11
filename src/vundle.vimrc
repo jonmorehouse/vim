@@ -1,53 +1,68 @@
-" bootstrap vundle
+"""
+"""     BOOTSTRAP VUNDLE
+"""
 set nocompatible 
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+"""
+"""     UTILITIES
+"""
 Plugin 'gmarik/vundle'
-"Plugin 'file:///Users/MorehouseJ09/Documents/programs/vim-runner'
-
-
 Plugin 'jonmorehouse/vim-runner'
-Plugin 'tpope/vim-fugitive'
 Plugin 'git:/git.wincent.com/command-t.git'
-Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'vim-scripts/localrc.vim'
+Plugin 'scrooloose/nerdcommenter'
+
+"""
+"""     COLORSCHEMES
+"""
 Plugin 'altercation/vim-colors-solarized'
+"Plugin 'flazz/vim-colorschemes'
+"Plugin 'tomasr/molokai'
+"Plugin 'sickill/vim-monokai'
+"Plugin 'vim-scripts/peaksea'
+"Plugin 'sickill/vim-sunburst'
+
+
+"""
+"""     NAVIGATION
+"""
+Plugin 'wincent/Command-T'
+Plugin 'goldfeld/vim-seek'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'ton/vim-bufsurf'
+
+"""
+"""     SYNTAX
+"""
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'wincent/Command-T'
-Plugin 'tomtom/vimball.rb'
-Plugin 'tomtom/vimscriptuploader.rb'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'jonmorehouse/gyp.vim'
-Plugin 'mbadran/headlights'
-Plugin 'vim-scripts/localrc.vim'
-Plugin 'sjbach/lusty'
-Plugin 'tomasr/molokai'
-Plugin 'sickill/vim-monokai'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-scripts/peaksea'
-Plugin 'sickill/vim-sunburst'
-Plugin 'pydave/textconv.vim'
-Plugin 'ton/vim-bufsurf'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-cucumber'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'kana/vim-fakeclip'
-Plugin 'kana/mduem'
 Plugin 'jnwhiteh/vim-golang'
-Plugin 'eraserhd/vim-ios'
+Plugin 'tpope/vim-cucumber'
 Plugin 'elzr/vim-json'
-Plugin 'vim-scripts/kiwi.vim'
-Plugin 'vim-scripts/loremipsum'
 Plugin 'tpope/vim-markdown'
 Plugin 'sickill/vim-monokai'
 Plugin 'b4winckler/vim-objc'
-Plugin 'tpope/vim-pathogen'
-Plugin 'goldfeld/vim-seek'
-Plugin 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
-Plugin 'tpope/vim-surround'
+
+"""
+"""     PLUGIN DEVELOPMENT
+"""
 Plugin 'dsummersl/vimunit'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-scripts/YankRing.vim'
+
+
+"""
+"""     RESEARCH / PLAYGROUND
+"""
+"" git wrappers for vim
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'vim-scripts/loremipsum'
+"Plugin 'tpope/vim-surround'
+"" copy / paste buffer
+"Plugin 'vim-scripts/YankRing.vim'
+"" bundle menu for vim
+"Plugin 'mbadran/headlights'
+"" buffer file system explorer
+"Plugin 'sjbach/lusty'
