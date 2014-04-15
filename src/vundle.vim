@@ -13,6 +13,7 @@ Plugin 'gmarik/vundle'
 Plugin 'jonmorehouse/vim-runner'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/Conque-Shell'
 
 """
 """     NAVIGATION
@@ -54,6 +55,7 @@ Plugin 'dsummersl/vimunit'
 """
 """     RESEARCH / PLAYGROUND
 """
+"Plugin 'file:///Users/MorehouseJ09/Desktop/vim-tail-bundle'
 "" git wrappers for vim
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-scripts/loremipsum'

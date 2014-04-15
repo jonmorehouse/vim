@@ -21,7 +21,7 @@ noremap <Leader>y y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:bdelete!<CR>
 "   Initialize Buffer shortcuts
 """""""""
 """""""""
-noremap <Leader>bbb :buffers<CR>
+noremap <Leader>bb :buffers<CR>
 noremap <Leader>jj :BufSurfBack<CR>
 noremap <Leader>kk :BufSurfForward<CR>
 noremap <Leader>bd :bd<CR>
@@ -55,12 +55,10 @@ map <Leader>t :call CommandTWrapper()<CR>
 
 """""""""
 """""""""
-"   Initialize workflow shortcuts
+"   Initialize buffer flow shortcuts
 """""""""
 """""""""
-" now map some shortcuts to run our favorite grunt r commands (to restart
-" tasks and servers)
-" map up pomodoro start and stop functions
-noremap <Leader>pp :call Utilities#CleanShell("p p")<CR><CR>
-
+map <Leader>sv :execute("vsplit")<CR>
+map <Leader>sh :execute("split")<CR>
+map <Leader>sc :execute("close")<CR>
 
