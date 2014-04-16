@@ -4,9 +4,10 @@
 """""""""
 """""""""
 let mapleader = ","
+
 " initialize save 
-noremap <Leader>s :wall<CR>
-noremap <Leader>ss :wall<CR>
+noremap <Leader> :wall <CR>
+noremap <Leader>ss :wall <CR>
 
 " initialize exit shortcut!!
 noremap <Leader>x :call Close()<CR>

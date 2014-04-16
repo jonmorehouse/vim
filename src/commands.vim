@@ -1,6 +1,6 @@
 """""""""
 """""""""
-" 	Initialize general commands mapped off  
+"   Initialize general commands mapped off  
 """""""""
 """""""""
 """""""""
@@ -16,7 +16,7 @@ command! W :w ! pbcopy
 command! R :r ! pbpaste
 
 " source our vimrc and reload everything
-command! S silent! :call Reload()
+command! S :call Reload()
 
 " save a file that requires sudo saving etc but wasn't opened under sudo
 command! WW :w !sudo tee %
@@ -29,7 +29,7 @@ command! Q :quitall!
 
 """"""""
 """"""""
-"	 Custom Function Command Mappings
+"    Custom Function Command Mappings
 """"""""
 """"""""
 

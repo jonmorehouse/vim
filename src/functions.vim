@@ -95,15 +95,15 @@ endfunction
 "        GENERAL UTILITIES 
 """""""""
 """""""""
-fu! Reload()
-
-    let path=@%
-    set autoread
-    :so $HOME/.vimrc
-    call Runner#Bootstrap()
-    eval "edit ". path
-    
-endfunction
+if !exists("*Reload")
+    fu Reload()
+        let path=@%
+        set autoread
+        so $HOME/.vim/vimrc
+        call Runner#Bootstrap()
+        execute "edit ". path
+    endfunction
+endif
 
 " local.vimrc override!
 fu! LocalVimrc()

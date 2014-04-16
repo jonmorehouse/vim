@@ -67,9 +67,3 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
-"""""""""
-"""""""""
-"   PreLoad Scripts / Calls
-"""""""""
-"""""""""
-call ConfigureSpaces(2)
