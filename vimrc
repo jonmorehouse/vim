@@ -14,7 +14,10 @@ call BootstrapPath("main.vim")
 call BootstrapPath("filetypes.vim")
 call BootstrapPath("commands.vim")
 call BootstrapPath("leader_commands.vim")
+call BootstrapPath("plugin_settings.vim")
 call BootstrapPath("personal.vim")
+
+" bootstrap any startup commands
 call BootstrapPath("bootstrap.vim")
 
 

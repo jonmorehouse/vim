@@ -23,6 +23,7 @@ noremap <Leader>y y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:bdelete!<CR>
 """""""""
 """""""""
 noremap <Leader>bb :buffers<CR>
+map <Leader>b :buffers<CR>
 noremap <Leader>jj :BufSurfBack<CR>
 noremap <Leader>kk :BufSurfForward<CR>
 noremap <Leader>bd :bd<CR>
@@ -60,7 +61,11 @@ map <Leader>t :call CommandTWrapper()<CR>
 """""""""
 """""""""
 map <Leader>v :execute("vsplit")<CR>
-map <Leader>h :execute("split")<CR>
+map <Leader>s :execute("split")<CR>
 map <Leader>u :execute("close")<CR>
 
+map <Leader>j :wincmd j<CR>
+map <Leader>h :wincmd h<CR>
+map <Leader>k :wincmd k<CR>
+map <Leader>l :wincmd l<CR>
 
