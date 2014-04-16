@@ -59,7 +59,8 @@ map <Leader>t :call CommandTWrapper()<CR>
 "   Initialize buffer flow shortcuts
 """""""""
 """""""""
-map <Leader>sv :execute("vsplit")<CR>
-map <Leader>sh :execute("split")<CR>
-map <Leader>sc :execute("close")<CR>
+map <Leader>v :execute("vsplit")<CR>
+map <Leader>h :execute("split")<CR>
+map <Leader>u :execute("close")<CR>
+
 

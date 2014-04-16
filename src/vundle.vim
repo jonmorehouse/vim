@@ -20,7 +20,6 @@ Plugin 'vim-scripts/Conque-Shell'
 """
 Plugin 'wincent/Command-T'
 Plugin 'goldfeld/vim-seek'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'ton/vim-bufsurf'
 
 """
@@ -55,6 +54,7 @@ Plugin 'dsummersl/vimunit'
 """
 """     RESEARCH / PLAYGROUND
 """
+"Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'file:///Users/MorehouseJ09/Desktop/vim-tail-bundle'
 "" git wrappers for vim
 "Plugin 'tpope/vim-fugitive'
