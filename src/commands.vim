@@ -36,3 +36,6 @@ command! Q :quitall!
 " reset the basepath
 command! E :call CDBasePath()
 command! EE :call CDSecondaryPath()
+
+command! G :Git
+
