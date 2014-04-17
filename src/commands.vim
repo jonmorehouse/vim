@@ -21,7 +21,7 @@ command! S :call Reload()
 command! WW :w !sudo tee %
 
 " new tab shortcut
-command! T :tabedit
+command! -nargs=* T :tabedit <args>
 
 " clos all current paths
 command! Q :quitall!
@@ -34,4 +34,5 @@ command! Q :quitall!
 " reset the basepath
 command! E :call CDBasePath()
 command! EE :call CDSecondaryPath()
+
 

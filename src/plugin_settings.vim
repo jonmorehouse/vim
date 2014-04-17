@@ -23,4 +23,5 @@ let g:ConqueTerm_InsertOnEnter = 0
 """
 """ Vim Fugitive Mappings
 """
-command! -nargs=* G :Git <args>
+command! -nargs=* G :Git <args> 
+cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
