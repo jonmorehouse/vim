@@ -3,7 +3,6 @@
 "   Initialize general commands mapped off  
 """""""""
 """""""""
-"""""""""
 
 "set whther or not to highlight searches
 "set nohlsearch
@@ -32,12 +31,7 @@ command! Q :quitall!
 "    Custom Function Command Mappings
 """"""""
 """"""""
-
 " reset the basepath
 command! E :call CDBasePath()
 command! EE :call CDSecondaryPath()
 
-command! G :Git
-
-
-command! -nargs=* G :Git <args>

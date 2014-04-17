@@ -21,5 +21,6 @@ let g:ConqueTerm_CloseOnEnd = 0
 let g:ConqueTerm_InsertOnEnter = 0
 
 """
+""" Vim Fugitive Mappings
 """
-"""
+command! -nargs=* G :Git <args>
