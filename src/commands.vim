@@ -39,3 +39,5 @@ command! EE :call CDSecondaryPath()
 
 command! G :Git
 
+
+command! -nargs=* G :Git <args>
