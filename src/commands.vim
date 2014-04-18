@@ -35,4 +35,9 @@ command! Q :quitall!
 command! E :call CDBasePath()
 command! EE :call CDSecondaryPath()
 
-
+""""""""
+""""""""
+"    Lowercase key overrides
+""""""""
+""""""""
+cabbrev s <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'wall' : 's')<CR>
