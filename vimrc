@@ -1,7 +1,7 @@
 fu! BootstrapPath(path)
-	let path = expand("$HOME/.vim/src/". a:path)
+  let path = expand("$HOME/.vim/src/". a:path)
   if filereadable(path)
-	  execute "source ". path
+    execute "source ". path
   endif
 endfunction
 
@@ -13,6 +13,7 @@ call BootstrapPath("functions.vim")
 call BootstrapPath("main.vim")
 call BootstrapPath("filetypes.vim")
 call BootstrapPath("commands.vim")
+call BootstrapPath("mappings.vim")
 call BootstrapPath("leader_commands.vim")
 call BootstrapPath("plugin_settings.vim")
 call BootstrapPath("personal.vim")

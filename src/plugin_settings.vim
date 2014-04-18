@@ -23,5 +23,7 @@ let g:ConqueTerm_InsertOnEnter = 0
 """
 """ Vim Fugitive Mappings
 """
-command! -nargs=* G :Git <args> 
+" always clear the screen after running (so we don't have old results etc)
+command! -nargs=* G :Git <args> | :execute("silent ! \"clear\"") | :redraw!
 cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
+
