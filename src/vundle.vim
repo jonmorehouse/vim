@@ -15,6 +15,7 @@ Plugin 'vim-scripts/localrc.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'tpope/vim-fugitive'
+Plugin 'jaxbot/github-issues'
 
 """
 """     NAVIGATION
