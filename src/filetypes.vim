@@ -88,7 +88,7 @@ au BufNewFile,BufRead *py call PythonConfig()
 function! PythonConfig()
 
     set filetype=python
-    :call ConfigureSpaces(2)
+    :call ConfigureSpaces(4)
 
 endfunction
 

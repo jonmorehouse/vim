@@ -139,7 +139,7 @@ fu! ConfigureTabs(spaces)
 
     set noexpandtab
     execute "set tabstop=". a:spaces
-    retab
+    %retab!
 
 endfunction
 
@@ -150,7 +150,7 @@ fu! ConfigureSpaces(spaces)
     execute "set softtabstop=".a:spaces
     set expandtab 
 
-    retab
+    %retab!
 
 endfunction
 
