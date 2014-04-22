@@ -31,6 +31,8 @@ cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
 let g:fugitive_git_executable = '/usr/local/bin/hub'
 
 """
-""" Vim Settings
+""" Git Issues.vim 
 """
 let g:github_access_token = $GITHUB_ISSUES_TOKEN
+let g:github_upstream_issues = 1
+
