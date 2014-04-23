@@ -35,5 +35,5 @@ let g:fugitive_git_executable = '/usr/local/bin/hub'
 """
 let g:github_access_token = $GITHUB_ISSUES_TOKEN
 let g:github_upstream_issues = 1
-let g:github_same_window = 0
+let g:github_same_window = 1
 
