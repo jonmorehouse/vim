@@ -17,6 +17,7 @@ Plugin 'vim-scripts/Conque-Shell'
 Plugin 'sjl/clam.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jaxbot/github-issues.vim'
+Plugin 'vim-scripts/TwitVim'
 
 """
 """     NAVIGATION
