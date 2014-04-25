@@ -24,8 +24,8 @@ let g:ConqueTerm_InsertOnEnter = 0
 """ Vim Fugitive Mappings
 """
 " always clear the screen after running (so we don't have old results etc)
-command! -nargs=* G :Git <args> | :execute("silent ! \"clear\"") | :redraw!
-cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
+command! -nargs=* Gi :Git <args> | :execute("silent ! \"clear\"") | :redraw!
+cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Gi' : 'g')<CR>
 
 " use hub with vim
 let g:fugitive_git_executable = '/usr/local/bin/hub'
@@ -36,4 +36,5 @@ let g:fugitive_git_executable = '/usr/local/bin/hub'
 let g:github_access_token = $GITHUB_ISSUES_TOKEN
 let g:github_upstream_issues = 1
 let g:github_same_window = 1
+
 
