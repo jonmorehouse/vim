@@ -18,7 +18,7 @@ Plugin 'sjl/clam.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jaxbot/github-issues.vim'
 Plugin 'vim-scripts/TwitVim'
-Plugin 'szw/vim-g'
+" Plugin 'szw/vim-g'
 
 """
 """     NAVIGATION
