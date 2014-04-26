@@ -42,5 +42,6 @@ let g:github_same_window = 1
 """ Vim Fugitive Mappings
 """
 " always clear the screen after running (so we don't have old results etc)
-cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Go' : 'go')<CR>
+cabbrev go <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Google' : 'go')<CR>
+cabbrev gf <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Googlef' : 'gf')<CR>
 
