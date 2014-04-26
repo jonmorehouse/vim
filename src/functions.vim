@@ -137,10 +137,12 @@ endfunction
 """""""""
 fu! ConfigureTabs(spaces)
 
-    set noexpandtab
-    execute "set tabstop=". a:spaces
-    %retab!
+    execute "set tabstop=".a:spaces
+    execute "set shiftwidth=".a:spaces
+    execute "set softtabstop=".a:spaces
 
+    set noexpandtab
+    %retab!
 endfunction
 
 fu! ConfigureSpaces(spaces)
@@ -151,7 +153,6 @@ fu! ConfigureSpaces(spaces)
     set expandtab 
 
     %retab!
-
 endfunction
 
 " append markdown headers onto the next line 
