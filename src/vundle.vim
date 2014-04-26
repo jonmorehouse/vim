@@ -10,15 +10,20 @@ call vundle#rc()
 """     UTILITIES
 """
 Plugin 'gmarik/vundle'
-Plugin 'jonmorehouse/vim-runner'
-Plugin 'vim-scripts/localrc.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'sjl/clam.vim'
+
+"""
+"""     WorkFlow 
+"""
+Plugin 'jonmorehouse/vim-runner'
+Plugin 'vim-scripts/localrc.vim'
+Plugin 'jonmorehouse/vim-g'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jaxbot/github-issues.vim'
 Plugin 'vim-scripts/TwitVim'
-Plugin 'jonmorehouse/vim-g'
+
 
 """
 """     NAVIGATION
