@@ -31,6 +31,7 @@ Plugin 'vim-scripts/TwitVim'
 Plugin 'wincent/Command-T'
 Plugin 'goldfeld/vim-seek'
 Plugin 'ton/vim-bufsurf'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 """
 """     COLORSCHEMES
