@@ -41,3 +41,13 @@ command! EE :call CDSecondaryPath()
 """"""""
 """"""""
 cabbrev s <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'wall' : 's')<CR>
+cabbrev s <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'wall' : 's')<CR>
+
+"""
+""" Normal mode mappings
+"""
+map s :wall<CR>
+nmap f :wall<CR>
+map <space> :wall <CR>
+nmap ; :
+noremap ;; ;
