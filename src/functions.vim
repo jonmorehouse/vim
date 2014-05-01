@@ -1,49 +1,44 @@
 """""""""
 """""""""
-"     UTILITY FUNCTIONS
+"   UTILITY FUNCTIONS
 """"""""
 """""""""
 fu! GetVisualSelection()
-    
-    let [lnum1, col1] = getpos("'<")[1:2]
-    let [lnum2, col2] = getpos("'>")[1:2]
-    let lines = getline(lnum1, lnum2)
-    let lines[-1] = lines[-1][: col2 - 2]
-    let lines[0] = lines[0][col1 - 1:]
-    return join(lines, "\n")
-
+  
+  let [lnum1, col1] = getpos("'<")[1:2]
+  let [lnum2, col2] = getpos("'>")[1:2]
+  let lines = getline(lnum1, lnum2)
+  let lines[-1] = lines[-1][: col2 - 2]
+  let lines[0] = lines[0][col1 - 1:]
+  return join(lines, "\n")
 endfunction
 
 """""""""
 """""""""
-"    PATH UTILTIES
+"  PATH UTILTIES
 """"""""
 """""""""
 " commandTWrapper to always call our base path
 fu! CommandTWrapper()
 
-    if !exists("g:basePath")
+  if !exists("g:basePath")
+    CommandT
+  else
 
-        :CommandT
-
-    else
-
-        let command=":CommandT " . g:basePath
-        execute command
-    endif
+    let command=":CommandT " . g:basePath
+    execute command
+  endif
 
 endfunction
 
 " go into second path
 fu! CDSecondaryPath()
+  if !exists("g:secondaryPath")   
+    return
+  endif
 
-    if !exists("g:secondaryPath")   
-    
-        return
-    endif
-
-    " if it does exist then we want to open the base dir 
-    execute "edit " . g:secondaryPath
+  " if it does exist then we want to open the base dir 
+  execute "edit " . g:secondaryPath
 
 endfunction
 
@@ -52,9 +47,9 @@ endfunction
 " this is useful for setting the path of tests to be run when you are working
 " on various files 
 fu! UpdatePath() 
-    
-    " cache the current word directory
-    let g:currentPath = getcwd()
+  
+  " cache the current word directory
+  let g:currentPath = getcwd()
 
 endfunction
 
@@ -62,28 +57,27 @@ endfunction
 " this is useful for setting the path of tests to be run when you are working
 " on various files 
 fu! UpdateSecondaryPath() 
-    
-    " cache the current word directory
-    let g:secondaryPath = getcwd()
+  
+  " cache the current word directory
+  let g:secondaryPath = getcwd()
 
 endfunction
 
 " update the current path to the current file
 fu! UpdatePathToFile()
-    
-    let g:currentPath = getcwd() . "/" . bufname("%")
+  
+  let g:currentPath = getcwd() . "/" . bufname("%")
 
 endfunction
 
 " update the base path
 fu! CDBasePath()
 
-    if !exists("g:basePath")
-        
-        return
-    endif
+  if !exists("g:basePath")
+    return
+  endif
 
-    execute "edit " . g:basePath    
+  execute "edit " . g:basePath  
 
 
 endfunction
@@ -92,82 +86,81 @@ endfunction
 
 """""""""
 """""""""
-"        GENERAL UTILITIES 
+"    GENERAL UTILITIES 
 """""""""
 """""""""
 if !exists("*Reload")
-    fu Reload()
-        let path=@%
-        set autoread
-        so $HOME/.vim/vimrc
-        call Runner#Bootstrap()
-        execute "edit ". path
-    endfunction
+  fu Reload()
+    let path=@%
+    set autoread
+    so $HOME/.vim/vimrc
+    call Runner#Bootstrap()
+    execute "edit ". path
+  endfunction
 endif
 
 " local.vimrc override!
 fu! LocalVimrc()
+  
+  let localPath = getcwd() . "/.local.vimrc"
     
-    let localPath = getcwd() . "/.local.vimrc"
-        
-    if filereadable(localPath)
+  if filereadable(localPath)
 
-        :so .local.vimrc
-    endif
+    :so .local.vimrc
+  endif
 endfunction
 
 " Fancy close command for closing out buffers / vim in general
 fu! Close()
 
-    " get the length of all buffers
-    let buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+  " get the length of all buffers
+  let buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
 
-    " close the editor entirely if this is the last buffer!
-    if buffers == "1" || buffers == "0"
-        :q
-    else
-        :bd 
-    endif
+  " close the editor entirely if this is the last buffer!
+  if buffers == "1" || buffers == "0"
+    :q
+  else
+    :bd 
+  endif
 endfunction
 
 """""""""
 """""""""
-"        File Utilities
+"    File Utilities
 """""""""
 """""""""
 fu! ConfigureTabs(spaces)
 
-    execute "set tabstop=".a:spaces
-    execute "set shiftwidth=".a:spaces
-    execute "set softtabstop=".a:spaces
+  execute "set tabstop=".a:spaces
+  execute "set shiftwidth=".a:spaces
+  execute "set softtabstop=".a:spaces
 
-    set noexpandtab
-    %retab!
+  set noexpandtab
+  %retab!
 endfunction
 
 fu! ConfigureSpaces(spaces)
-    
-    execute "set tabstop=".a:spaces
-    execute "set shiftwidth=".a:spaces
-    execute "set softtabstop=".a:spaces
-    set expandtab 
+  
+  execute "set tabstop=".a:spaces
+  execute "set shiftwidth=".a:spaces
+  execute "set softtabstop=".a:spaces
+  set expandtab 
 
-    %retab!
+  %retab!
 endfunction
 
 " append markdown headers onto the next line 
 fu! MarkdownHeader(character)
 
-    " grab the quantity of the elements to insert
-    let a:number=strlen(getline("."))
-    
-    " escape 28 i letter escape escape
-    let command="normal!\<esc>o\<esc>".a:number."i".a:character."\<esc>"
+  " grab the quantity of the elements to insert
+  let a:number=strlen(getline("."))
+  
+  " escape 28 i letter escape escape
+  let command="normal!\<esc>o\<esc>".a:number."i".a:character."\<esc>"
 
-    " execute this command as needed
-    :execute command
+  " execute this command as needed
+  execute command
 
-    :execute "set filetype=markdown"
-
+  execute "set filetype=markdown"
 endfunction
 

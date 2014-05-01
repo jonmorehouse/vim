@@ -1,6 +1,6 @@
 """""""""
 """""""""
-"     General filetype configuration
+"   General filetype configuration
 """""""""
 """""""""
 "help with file types
@@ -11,16 +11,16 @@ au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
 
 """""""""
 """""""""
-"    Ruby and ruby related file types
+"  Ruby and ruby related file types
 """""""""
 """""""""
 " Ruby project files / settings
 au BufNewFile,BufRead *rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
 function! RubyConfig()
 
-    :call ConfigureSpaces(2)
-    set filetype=ruby
-    noremap <Leader>rr :call CleanShell("ruby " . @%)<CR>
+  call ConfigureSpaces(2)
+  set filetype=ruby
+  noremap <Leader>rr :call CleanShell("ruby " . @%)<CR>
 
 endfunction
 
@@ -32,14 +32,14 @@ endfunction
 au BufNewFile,BufRead *feature call CucumberConfig()
 function! CucumberConfig()
 
-    :call ConfigureSpaces(2)
-    noremap <Leader>rc :call CucumberRunner()<CR>
+  call ConfigureSpaces(2)
+  noremap <Leader>rc :call CucumberRunner()<CR>
 endfunction
 
 
 """""""""
 """""""""
-"     CPP / C / Objective-C Filetypes
+"   CPP / C / Objective-C Filetypes
 """""""""
 """""""""
 au BufNewFile,BufRead *.m,*.h set filetype=objc
@@ -47,14 +47,14 @@ au BufNewFile,BufRead *.pch set filetype=cpp
 
 """""""""
 """""""""
-"    System Configuration files / General File types
+"  System Configuration files / General File types
 """""""""
 """""""""
 " Vimrc files
 au BufNewFile,BufRead *.vimrc,*.vim call VimConfig()
 function! VimConfig()
-    set filetype=vim
-    ":call ConfigureSpaces(4)
+  set filetype=vim
+  call ConfigureSpaces(2)
 endfunction
 
 au BufNewFile,BufRead .shell_config set filetype=sh
@@ -64,45 +64,45 @@ au BufNewFile,BufRead *.yml call ConfigureSpaces(2)
 
 """""""""
 """""""""
-"    Markdown files / markdown-like files
+"  Markdown files / markdown-like files
 """""""""
 """""""""
 au BufRead,BufNewFile * if expand('%') =~ "GHI_ISSUE*" |  call MarkdownConfig() | endif
 au BufNewFile,BufRead *.md call MarkdownConfig()
 function! MarkdownConfig()
 
-    set filetype=markdown
-    set wrap
-    noremap <Leader>m :call MarkdownHeader("-")<CR>
-    noremap <Leader>mm :call MarkdownHeader("=")<CR>
-    :call ConfigureSpaces(2)
+  set filetype=markdown
+  set wrap
+  noremap <Leader>m :call MarkdownHeader("-")<CR>
+  noremap <Leader>mm :call MarkdownHeader("=")<CR>
+  call ConfigureSpaces(2)
 
 endfunction
 
 """""""""
 """""""""
-"     Python Project files
+"   Python Project files
 """""""""
 """""""""
 au BufNewFile,BufRead *py call PythonConfig()
 function! PythonConfig()
 
-    set filetype=python
-    :call ConfigureSpaces(4)
+  set filetype=python
+  call ConfigureSpaces(4)
 
 endfunction
 
 
 """""""""
 """""""""
-"     Haskell Project Files
+"   Haskell Project Files
 """""""""
 """""""""
 au BufNewFile,BufRead *.hs set commentstring="--"
 
 """""""""
 """""""""
-"        Cloudformation template files
+"    Cloudformation template files
 """""""""
 """""""""
 au BufNewFile,BufRead *.template set filetype=json

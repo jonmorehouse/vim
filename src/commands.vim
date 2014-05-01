@@ -51,3 +51,5 @@ nmap f :wall<CR>
 map <space> :wall <CR>
 nmap ; :
 noremap ;; ;
+
+
