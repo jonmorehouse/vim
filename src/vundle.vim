@@ -23,6 +23,7 @@ Plugin 'jonmorehouse/vim-g'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jaxbot/github-issues.vim'
 Plugin 'vim-scripts/TwitVim'
+Plugin 'jonmorehouse/vim-tmux'
 
 
 """
@@ -66,7 +67,7 @@ Plugin 'dsummersl/vimunit'
 """     RESEARCH / PLAYGROUND
 """
 "Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'file:///Users/MorehouseJ09/Desktop/vim-tail-bundle'
+" Plugin 'file:///Users/MorehouseJ09/Desktop/vim-tail-bundle'
 "" git wrappers for vim
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-scripts/loremipsum'
