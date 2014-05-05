@@ -63,7 +63,7 @@ map <Leader>t :call CommandTWrapper()<CR>
 map <Leader>v :execute("vsplit")<CR>
 map <Leader>s :execute("split")<CR>
 map <Leader>u :execute("only")<CR>
-map <Leader>x :execute("close")<CR>
+map <Leader>c :execute("close")<CR>
 
 map <Leader>j :wincmd j<CR>
 map <Leader>h :wincmd h<CR>
