@@ -61,5 +61,5 @@ map 4 "by
 map 5 "bx
 map 6 "bp
 " http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
-map yy y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
+map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
 
