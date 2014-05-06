@@ -15,7 +15,7 @@ noremap <Leader>x :call Close()<CR>
 " Greatest life saver ever!!! -- copy directly to mac clipboard from visual
 " selection
 " http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
-noremap <Leader>y y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:bdelete!<CR>
+noremap <Leader>y y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:close<CR>
 
 """""""""
 """""""""

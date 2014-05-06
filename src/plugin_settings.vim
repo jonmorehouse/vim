@@ -26,6 +26,7 @@ let g:ConqueTerm_InsertOnEnter = 0
 " always clear the screen after running (so we don't have old results etc)
 command! -nargs=* G :Git <args> | :execute("silent ! \"clear\"") | :redraw!
 cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
+map ga :Gcommit -a <CR>
 
 " use hub with vim
 let g:fugitive_git_executable = '/usr/local/bin/hub'
