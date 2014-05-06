@@ -41,9 +41,15 @@ let g:github_upstream_issues = 1
 let g:github_same_window = 1
 
 """
-""" Vim Fugitive Mappings
+""" Vim Google Mappings
 """
 " always clear the screen after running (so we don't have old results etc)
 cabbrev go <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Google' : 'go')<CR>
 cabbrev gf <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Googlef' : 'gf')<CR>
+
+"""
+""" BClose
+"""
+cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
+
 

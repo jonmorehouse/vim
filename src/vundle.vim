@@ -34,6 +34,7 @@ Plugin 'wincent/Command-T'
 Plugin 'goldfeld/vim-seek'
 Plugin 'ton/vim-bufsurf'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'rbgrouleff/bclose.vim'
 
 """
 """     COLORSCHEMES
