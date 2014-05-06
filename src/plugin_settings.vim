@@ -32,7 +32,6 @@ map ga :Gcommit -a <CR>
 let g:fugitive_git_executable = '/usr/local/bin/hub'
 autocmd FileType gitcommit map <buffer> ss :w<CR>:close
 
-
 """
 """ Git Issues.vim 
 """
