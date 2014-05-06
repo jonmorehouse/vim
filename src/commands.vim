@@ -48,9 +48,14 @@ cabbrev qq <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quitall' : 'qq')<CR>
 """ Normal mode mappings
 """
 map s :wall<CR>
-nmap f :wall<CR>
-map <space> :wall <CR>
 nmap ; :
 noremap ;; ;
+map aa a
+
+"""
+""" Normal mode mappings
+"""
+map ay "ay
+map ap "ap
 
 
