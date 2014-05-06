@@ -30,7 +30,7 @@ cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
 map ga :Gcommit -a <CR>
 " use hub
 let g:fugitive_git_executable = '/usr/local/bin/hub'
-autocmd FileType gitcommit map <buffer> ss :w<CR>:close<CR><CR>:sleep 50m<CR>
+autocmd FileType gitcommit map <buffer> ss :w<CR>:close<CR><CR>:sleep 500m<CR>
 
 """
 """ Git Issues.vim 
