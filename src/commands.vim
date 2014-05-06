@@ -50,12 +50,16 @@ cabbrev qq <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quitall' : 'qq')<CR>
 map s :wall<CR>
 nmap ; :
 noremap ;; ;
-map aa a
 
 """
-""" Normal mode mappings
+""" Copy mappings
 """
-map ay "ay
-map ap "ap
-
+map 1 "ay
+map 2 "ax
+map 3 "ap
+map 4 "by
+map 5 "bx
+map 6 "bp
+" http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
+map yy y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
 

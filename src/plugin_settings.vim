@@ -38,7 +38,6 @@ let g:github_access_token = $GITHUB_ISSUES_TOKEN
 let g:github_upstream_issues = 1
 let g:github_same_window = 1
 
-
 """
 """ Vim Fugitive Mappings
 """

@@ -12,10 +12,6 @@ noremap <Leader>ss :wall <CR>
 " initialize exit shortcut!!
 noremap <Leader>x :call Close()<CR>
 
-" Greatest life saver ever!!! -- copy directly to mac clipboard from visual " selection
-" http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
-map <Leader>y y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
-
 """""""""
 """""""""
 "   Initialize Buffer shortcuts
