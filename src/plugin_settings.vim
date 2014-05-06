@@ -28,9 +28,10 @@ command! -nargs=* G :Git <args> | :execute("silent ! \"clear\"") | :redraw!
 cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
 " easier git commits
 map ga :Gcommit -a <CR>
+map gi :Git 
 " use hub
 let g:fugitive_git_executable = '/usr/local/bin/hub'
-autocmd FileType gitcommit map <buffer> ss :w<CR>:close<CR>:sleep 1250m<CR><CR>
+autocmd FileType gitcommit map <buffer> ss :w<CR>:close<CR><CR>
 
 """
 """ Git Issues.vim 
