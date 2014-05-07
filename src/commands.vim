@@ -11,6 +11,7 @@ command! R :r ! pbpaste
 
 " source our vimrc and reload everything
 command! Reload :call Reload()
+command! S :call Reload()
 
 " save a file that requires sudo saving etc but wasn't opened under sudo
 command! WW :w !sudo tee %
@@ -29,9 +30,12 @@ map Q :quitall!<CR>
 """"""""
 " reset the basepath
 map E :call CDBasePath()<CR>
+command! E :call CDBasePath()<CR>
+map me :call CDBasePath()<CR>
+" navigate to the secondary path
 map SE :call CDSecondaryPath()<CR>
-
-cabbrev ee <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'call CDBasePath()' : 'ee')<CR>
+command! SE :call CDSecondaryPath()<CR>
+map ms :call CDSecondaryPath()<CR>
 
 """"""""
 """"""""
