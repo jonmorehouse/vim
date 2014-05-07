@@ -30,11 +30,11 @@ map Q :quitall!<CR>
 """"""""
 " reset the basepath
 map E :call CDBasePath()<CR>
-command! E :call CDBasePath()<CR>
+command! E :call CDBasePath()
 map me :call CDBasePath()<CR>
 " navigate to the secondary path
 map SE :call CDSecondaryPath()<CR>
-command! SE :call CDSecondaryPath()<CR>
+command! SE :call CDSecondaryPath()
 map ms :call CDSecondaryPath()<CR>
 
 """"""""
@@ -70,6 +70,5 @@ map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim 
 """
 map cn :cn<CR>
 map cp :cp<CR>
-map mm :echo "HELLO"<CR>
 
 
