@@ -4,7 +4,6 @@
 """""""""
 """""""""
 command! C let @/=""
-map bc let @/=""
 
 " set up and alias to help with saving / reading to clipboard
 command! W :w ! pbcopy
@@ -29,7 +28,7 @@ map Q :quitall!<CR>
 """"""""
 """"""""
 " reset the basepath
-command! E :call CDBasePath()
+map E :call CDBasePath()<CR>
 cabbrev ee <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'call CDBasePath()' : 'ee')<CR>
 map be :call CDBasePath()<CR>
 command! EE :call CDSecondaryPath()

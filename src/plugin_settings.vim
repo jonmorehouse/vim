@@ -41,6 +41,13 @@ let g:github_upstream_issues = 1
 let g:github_same_window = 1
 
 """
+""" VimHub Mappings / Configuration
+"""
+map bi :Gissues 
+map bl :Gissues <CR>
+map bn :Gissue 
+
+"""
 """ Vim Google Mappings
 """
 " always clear the screen after running (so we don't have old results etc)
@@ -53,4 +60,8 @@ cabbrev gf <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Googlef' : 'gf')<CR>
 cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
 map bc :Bclose <CR>
 
+"""
+""" Backlog commands
+"""
+map bp :e $HOME/.backlog/README.md<CR>
 
