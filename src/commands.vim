@@ -10,7 +10,7 @@ command! W :w ! pbcopy
 command! R :r ! pbpaste
 
 " source our vimrc and reload everything
-command! S :call Reload()
+command! Reload :call Reload()
 
 " save a file that requires sudo saving etc but wasn't opened under sudo
 command! WW :w !sudo tee %
@@ -29,9 +29,9 @@ map Q :quitall!<CR>
 """"""""
 " reset the basepath
 map E :call CDBasePath()<CR>
+map SE :call CDSecondaryPath()<CR>
+
 cabbrev ee <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'call CDBasePath()' : 'ee')<CR>
-map be :call CDBasePath()<CR>
-command! EE :call CDSecondaryPath()
 
 """"""""
 """"""""
@@ -48,8 +48,6 @@ cabbrev qq <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quitall' : 'qq')<CR>
 map s :wall<CR>
 nmap ; :
 noremap ;; ;
-" this allows us to map b->other commands and still use b!
-map bb b1
 
 """
 """ Copy mappings
@@ -62,4 +60,12 @@ map 5 "bx
 map 6 "bp
 " http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
 map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
+
+"""
+""" QuickFix Mappings
+"""
+map cn :cn<CR>
+map cp :cp<CR>
+map mm :echo "HELLO"<CR>
+
 

@@ -4,6 +4,13 @@
 let g:SeekKey = 'f'
 let g:seekBackKey = 'F'
 
+"""
+""" Netrw - this is the culprit behind the me issue ...
+"""
+"au BufNewFile,BufRead,BufEnter,BufWinEnter * call IHateNetrw()
+"fu! IHateNetrw()
+  "map me :echo "HERE"<CR>
+"endfunction
 
 """
 """ Command T
@@ -43,9 +50,9 @@ let g:github_same_window = 1
 """
 """ VimHub Mappings / Configuration
 """
-map bi :Gissues 
-map bl :Gissues <CR>
-map bn :Gissue 
+map mi :Gissues 
+map ml :Gissues <CR>
+map mn :Gissue 
 
 """
 """ Vim Google Mappings
@@ -57,12 +64,12 @@ cabbrev gf <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Googlef' : 'gf')<CR>
 """
 """ BClose
 """
-cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
-map bc :Bclose <CR>
+"cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
+map mc :Bclose <CR>
 
 """
 """ Custom file commands
 """
-map bp :e $HOME/.backlog/README.md<CR>
+map mp :e $HOME/.backlog/README.md<CR>
 map mv :e $HOME/.vim/src<CR>
 
