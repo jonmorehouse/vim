@@ -51,5 +51,6 @@ cabbrev gf <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Googlef' : 'gf')<CR>
 """ BClose
 """
 cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
+map bc :Bclose <CR>
 
 

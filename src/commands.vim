@@ -3,12 +3,8 @@
 "   Initialize general commands mapped off  
 """""""""
 """""""""
-
-"set whther or not to highlight searches
-"set nohlsearch
-"http://vim.wikia.com/wiki/Mac_OS_X_clipboard_sharing:
-" now create a command to clear the highlighting
 command! C let @/=""
+map bc let @/=""
 
 " set up and alias to help with saving / reading to clipboard
 command! W :w ! pbcopy
@@ -25,6 +21,7 @@ command! -nargs=* T :tabedit <args>
 
 " clos all current paths
 command! Q :quitall!
+map Q :quitall!<CR>
 
 """"""""
 """"""""
@@ -33,6 +30,8 @@ command! Q :quitall!
 """"""""
 " reset the basepath
 command! E :call CDBasePath()
+cabbrev ee <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'call CDBasePath()' : 'ee')<CR>
+map be :call CDBasePath()<CR>
 command! EE :call CDSecondaryPath()
 
 """"""""
@@ -62,4 +61,5 @@ map 5 "bx
 map 6 "bp
 " http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
 map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
+
 
