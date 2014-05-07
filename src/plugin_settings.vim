@@ -7,9 +7,10 @@ let g:seekBackKey = 'F'
 """
 """ Netrw - this is the culprit behind the me issue ...
 """
-"let g:loaded_netrwPlugin  = 1 " Disable built in netrw
+let g:loaded_netrwPlugin  = 1 " Disable built in netrw
 
 
+"""
 """ Command T
 """
 let g:CommandTWildIgnore=&wildignore . ",**/*js"
@@ -62,4 +63,7 @@ map mc :Bclose <CR>
 """
 map mp :e $HOME/.backlog/README.md<CR>
 map mv :e $HOME/.vim/src<CR>
+
+
+
 
