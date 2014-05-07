@@ -7,12 +7,9 @@ let g:seekBackKey = 'F'
 """
 """ Netrw - this is the culprit behind the me issue ...
 """
-"au BufNewFile,BufRead,BufEnter,BufWinEnter * call IHateNetrw()
-"fu! IHateNetrw()
-  "map me :echo "HERE"<CR>
-"endfunction
+"let g:loaded_netrwPlugin  = 1 " Disable built in netrw
 
-"""
+
 """ Command T
 """
 let g:CommandTWildIgnore=&wildignore . ",**/*js"
@@ -41,13 +38,6 @@ let g:fugitive_git_executable = '/usr/local/bin/hub'
 autocmd FileType gitcommit map <buffer> ss :w<CR>:close<CR><CR>
 
 """
-""" Git Issues.vim 
-"""
-let g:github_access_token = $GITHUB_ISSUES_TOKEN
-let g:github_upstream_issues = 1
-let g:github_same_window = 1
-
-"""
 """ VimHub Mappings / Configuration
 """
 map mi :Gissues 
@@ -64,7 +54,7 @@ cabbrev gf <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Googlef' : 'gf')<CR>
 """
 """ BClose
 """
-"cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
+cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
 map mc :Bclose <CR>
 
 """

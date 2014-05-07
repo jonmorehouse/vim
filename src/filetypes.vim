@@ -54,7 +54,7 @@ au BufNewFile,BufRead *.pch set filetype=cpp
 au BufNewFile,BufRead *.vimrc,*.vim call VimConfig()
 function! VimConfig()
   set filetype=vim
-  call ConfigureSpaces(2)
+  "call ConfigureSpaces(2)
 endfunction
 
 au BufNewFile,BufRead .shell_config set filetype=sh
