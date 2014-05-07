@@ -48,6 +48,8 @@ cabbrev qq <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quitall' : 'qq')<CR>
 map s :wall<CR>
 nmap ; :
 noremap ;; ;
+" this allows us to map b->other commands and still use b!
+map bb b1
 
 """
 """ Copy mappings
@@ -60,5 +62,4 @@ map 5 "bx
 map 6 "bp
 " http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
 map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
-
 

@@ -61,7 +61,8 @@ cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
 map bc :Bclose <CR>
 
 """
-""" Backlog commands
+""" Custom file commands
 """
 map bp :e $HOME/.backlog/README.md<CR>
+map mv :e $HOME/.vim/src<CR>
 
