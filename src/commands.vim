@@ -43,11 +43,11 @@ map Q :quitall!<CR>
 """"""""
 """"""""
 " reset the basepath
-map E :call CDBasePath()<CR>
+map me :call CDBasePath()<CR>
 command! E :call CDBasePath()
 
 " navigate to the secondary path
-map SE :call CDSecondaryPath()<CR>
+map ms :call CDSecondaryPath()<CR>
 command! SE :call CDSecondaryPath()
 
 """"""""
