@@ -4,7 +4,6 @@
 """"""""
 """""""""
 fu! GetVisualSelection()
-  
   let [lnum1, col1] = getpos("'<")[1:2]
   let [lnum2, col2] = getpos("'>")[1:2]
   let lines = getline(lnum1, lnum2)
@@ -63,18 +62,14 @@ endif
 
 " local.vimrc override!
 fu! LocalVimrc()
-  
   let localPath = getcwd() . "/.local.vimrc"
-    
   if filereadable(localPath)
-
     :so .local.vimrc
   endif
 endfunction
 
 " Fancy close command for closing out buffers / vim in general
 fu! SmartClose()
-
   " close command
   :silent! Bclose
   " if no file then show the explore command
@@ -107,20 +102,5 @@ fu! ConfigureSpaces(spaces)
   set expandtab 
 
   %retab!
-endfunction
-
-" append markdown headers onto the next line 
-fu! MarkdownHeader(character)
-
-  " grab the quantity of the elements to insert
-  let a:number=strlen(getline("."))
-  
-  " escape 28 i letter escape escape
-  let command="normal!\<esc>o\<esc>".a:number."i".a:character."\<esc>"
-
-  " execute this command as needed
-  execute command
-
-  execute "set filetype=markdown"
 endfunction
 

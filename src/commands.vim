@@ -31,7 +31,7 @@ command! -nargs=* T :tabedit <args>
 map T :execute("tabedit  ". @%)<CR>
 map mx :call SmartClose()<CR>
 map mc :close<CR>
-map md :bdelete!<CR>
+map md :bdelete!<bar>:close<CR>
 
 " close vim! 
 command! Q :quitall!
