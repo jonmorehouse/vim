@@ -78,8 +78,6 @@ fu! CDBasePath()
   endif
 
   execute "edit " . g:basePath  
-
-
 endfunction
 
 
@@ -111,17 +109,17 @@ fu! LocalVimrc()
 endfunction
 
 " Fancy close command for closing out buffers / vim in general
-fu! Close()
+fu! SmartClose()
 
-  " get the length of all buffers
-  let buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
-
-  " close the editor entirely if this is the last buffer!
-  if buffers == "1" || buffers == "0"
-    :q
-  else
-    :bd 
+  " only call Bclose if not in explore
+  if ! &filetype == "netrw"
+    :Bclose
   endif
+
+  if &buftype == "" || bufname(@%) == ""
+    :Explore
+  endif
+
 endfunction
 
 """""""""

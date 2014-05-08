@@ -7,21 +7,32 @@ command! C let @/=""
 
 " set up and alias to help with saving / reading to clipboard
 command! W :w ! pbcopy
-map W :w ! pbcopy
-command! R :r ! pbpaste
-map R :r ! pbpaste
-
-" source our vimrc and reload everything
-command! Reload :call Reload()
-command! S :call Reload()
-
+map W :w ! pbcopy<CR>
+map R :r ! pbpaste<CR>
 " save a file that requires sudo saving etc but wasn't opened under sudo
 command! WW :w !sudo tee %
 
+"""""""""
+"""""""""
+"        Development Plugins
+"""""""""
+"""""""""
+command! Reload :call Reload()
+command! S :call Reload()
+
+
+"""""""""
+"""""""""
+"        Window / Buffer Management Shortcuts
+"""""""""
+"""""""""
 " new tab shortcut
 command! -nargs=* T :tabedit <args>
+map T :tabedit<CR>
+map mx :call SmartClose()<CR>
+map mc :close<CR>
 
-" clos all current paths
+" close vim! 
 command! Q :quitall!
 map Q :quitall!<CR>
 
@@ -71,4 +82,5 @@ map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim 
 """
 map cn :cn<CR>
 map cp :cp<CR>
+
 

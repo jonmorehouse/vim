@@ -52,16 +52,3 @@ map mn :Gissue
 cabbrev go <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Google' : 'go')<CR>
 cabbrev gf <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Googlef' : 'gf')<CR>
 
-"""
-""" BClose
-"""
-cabbrev bc <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : 'bc')<CR>
-map mc :Bclose <CR>
-
-"""
-""" Custom file commands
-"""
-" this doesn't play too nicely with the symlink :(
-map mp :e $HOME/.backlog/README.md<CR>
-map mv :e $HOME/.vim/src<CR>
-

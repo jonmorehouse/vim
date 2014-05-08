@@ -5,13 +5,6 @@
 """""""""
 let mapleader = ","
 
-" initialize save 
-noremap <Leader> :wall <CR>
-noremap <Leader>ss :wall <CR>
-
-" initialize exit shortcut!!
-noremap <Leader>x :call Close()<CR>
-
 """""""""
 """""""""
 "   Initialize Buffer shortcuts
@@ -40,7 +33,6 @@ noremap <Leader>b9 :b9<CR>
 """""""""
 """""""""
 map <Leader>tc :call UpdatePath()<CR>
-map <Leader>tf :call UpdatePathToFile()<CR>
 map <Leader>ts :call UpdateSecondaryPath()<CR>
 
 
