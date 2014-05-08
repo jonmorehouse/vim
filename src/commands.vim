@@ -7,7 +7,9 @@ command! C let @/=""
 
 " set up and alias to help with saving / reading to clipboard
 command! W :w ! pbcopy
+map W :w ! pbcopy
 command! R :r ! pbpaste
+map R :r ! pbpaste
 
 " source our vimrc and reload everything
 command! Reload :call Reload()
@@ -31,11 +33,10 @@ map Q :quitall!<CR>
 " reset the basepath
 map E :call CDBasePath()<CR>
 command! E :call CDBasePath()
-map me :call CDBasePath()<CR>
+
 " navigate to the secondary path
 map SE :call CDSecondaryPath()<CR>
 command! SE :call CDSecondaryPath()
-map ms :call CDSecondaryPath()<CR>
 
 """"""""
 """"""""
@@ -70,5 +71,4 @@ map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim 
 """
 map cn :cn<CR>
 map cp :cp<CR>
-
 

@@ -63,5 +63,5 @@ map mc :Bclose <CR>
 """
 " this doesn't play too nicely with the symlink :(
 map mp :e $HOME/.backlog/README.md<CR>
-map mv :e $HOME/.vim/src/commands.vim<CR>
+map mv :e $HOME/.vim/src<CR>
 
