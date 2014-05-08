@@ -25,7 +25,6 @@ fu! CDSecondaryPath()
   execute "edit " . g:secondaryPath
 endfunction
 
-
 " do nothing if the basePath dt reset path to the current path
 " this is useful for setting the path of tests to be run when you are working
 fu! GetPath() 
