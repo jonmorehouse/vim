@@ -3,7 +3,9 @@
 "   Initialize general commands mapped off  
 """""""""
 """""""""
-command! C let @/=""
+map c :let @/=""<CR><CR>
+map C :let @/=""<CR><CR>
+
 
 " set up and alias to help with saving / reading to clipboard
 command! W :w ! pbcopy
