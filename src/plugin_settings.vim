@@ -37,7 +37,6 @@ map gi :Git
 map gp :Git pf <CR>
 " use hub
 let g:fugitive_git_executable = '/usr/local/bin/hub'
-autocmd FileType gitcommit map <buffer> ss :w<CR>:close<CR><CR>
 
 """
 """ VimHub Mappings / Configuration
