@@ -111,12 +111,10 @@ endfunction
 " Fancy close command for closing out buffers / vim in general
 fu! SmartClose()
 
-  " only call Bclose if not in explore
-  if ! &filetype == "netrw"
-    :Bclose
-  endif
-
-  if &buftype == "" || bufname(@%) == ""
+  " close command
+  :silent! Bclose
+  " if no file then show the explore command
+  if bufname(@%) == ""
     :Explore
   endif
 

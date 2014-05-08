@@ -15,6 +15,7 @@ map <Leader>b :buffers<CR>
 noremap <Leader>jj :BufSurfBack<CR>
 noremap <Leader>kk :BufSurfForward<CR>
 noremap <Leader>bd :bd<CR>
+map <Leader>x :call SmartClose()<CR>
 
 " commands for switching buffers quicker
 noremap <Leader>b1 :b1<CR>
