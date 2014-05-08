@@ -33,15 +33,8 @@ noremap <Leader>b9 :b9<CR>
 "    Initialize Path Shortcuts
 """""""""
 """""""""
-map <Leader>tc :call UpdatePath()<CR>
-map <Leader>ts :call UpdateSecondaryPath()<CR>
-
-
-""""""""
-""""""""
-""""""""
-map <Leader>t :call CommandTWrapper()<CR>
-
+map <Leader>tc :let g:basePath=GetPath()<CR>
+map <Leader>ts :let g:secondaryPath=GetPath()<CR>
 
 """""""""
 """""""""

@@ -15,72 +15,36 @@ endfunction
 
 """""""""
 """""""""
-"  PATH UTILTIES
-""""""""
+"        PATH UTILTIES
 """""""""
-" commandTWrapper to always call our base path
-fu! CommandTWrapper()
-
-  if !exists("g:basePath")
-    CommandT
-  else
-
-    let command=":CommandT " . g:basePath
-    execute command
-  endif
-
-endfunction
-
-" go into second path
+"""""""""
 fu! CDSecondaryPath()
   if !exists("g:secondaryPath")   
     return
   endif
-
   " if it does exist then we want to open the base dir 
   execute "edit " . g:secondaryPath
-
 endfunction
 
 
 " do nothing if the basePath dt reset path to the current path
 " this is useful for setting the path of tests to be run when you are working
-" on various files 
-fu! UpdatePath() 
-  
-  " cache the current word directory
-  let g:currentPath = getcwd()
-
-endfunction
-
-" do nothing if the basePath dt reset path to the current path
-" this is useful for setting the path of tests to be run when you are working
-" on various files 
-fu! UpdateSecondaryPath() 
-  
-  " cache the current word directory
-  let g:secondaryPath = getcwd()
-
-endfunction
-
-" update the current path to the current file
-fu! UpdatePathToFile()
-  
-  let g:currentPath = getcwd() . "/" . bufname("%")
-
+fu! GetPath() 
+  if &buftype == "netrw"
+    return expand(bufname(""))    
+  else
+    " cache the current word directory
+    return getcwd()
+  endif
 endfunction
 
 " update the base path
 fu! CDBasePath()
-
   if !exists("g:basePath")
     return
   endif
-
   execute "edit " . g:basePath  
 endfunction
-
-
 
 """""""""
 """""""""

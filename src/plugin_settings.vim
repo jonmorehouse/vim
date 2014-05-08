@@ -16,6 +16,16 @@ let g:loaded_netrwPlugin  = 1 " Disable built in netrw
 let g:CommandTWildIgnore=&wildignore . ",**/*js"
 let g:CommandTMinHeight=15
 let g:CommandTMaxHeight=5
+map <Leader>t :call CommandTWrapper()<CR>
+" always call command t from the base path
+fu! CommandTWrapper()
+  if !exists("g:basePath")
+    CommandT
+  else
+    let command=":CommandT " . g:basePath
+    execute command
+  endif
+endfunction
 
 
 """
