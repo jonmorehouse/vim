@@ -60,6 +60,6 @@ map mn :Gissue
 """ Vim Google Mappings
 """
 " always clear the screen after running (so we don't have old results etc)
-cabbrev go <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Google' : 'go')<CR>
-cabbrev gf <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Googlef' : 'gf')<CR>
+map mg :Google 
+map mgf :Googlef 
 
