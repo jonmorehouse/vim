@@ -5,6 +5,7 @@
 """""""""
 map c :let @/=""<CR><CR>
 map C :let @/=""<CR><CR>
+command! C let @/=""
 
 
 " set up and alias to help with saving / reading to clipboard
