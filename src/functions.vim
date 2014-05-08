@@ -29,7 +29,7 @@ endfunction
 " do nothing if the basePath dt reset path to the current path
 " this is useful for setting the path of tests to be run when you are working
 fu! GetPath() 
-  if &buftype == "netrw"
+  if &filetype == "netrw"
     return expand(bufname(""))    
   else
     " cache the current word directory
