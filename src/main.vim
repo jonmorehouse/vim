@@ -53,7 +53,7 @@ nmap Q gqap
 "   Intialize vim hacks
 """"""""
 " ensure that we safely change the directory to the current buffer as changing
-autocmd BufEnter * call AutoDirectoryChange() 
+autocmd BufEnter * silent! lcd %:p:h
 
 """""""""
 """""""""
