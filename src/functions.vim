@@ -17,6 +17,18 @@ endfunction
 "        PATH UTILTIES
 """""""""
 """""""""
+" always update the directory so that commands get run from the right place
+fu! AutoDirectoryChange()
+
+  if &filetype == "netrw"
+    let path=expand(bufname(""))    
+  else
+    let path=expand("%:p:h")
+  endif
+  execute("cd ". path)
+
+endfunction
+
 fu! CDSecondaryPath()
   if !exists("g:secondaryPath")   
     return

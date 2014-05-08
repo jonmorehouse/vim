@@ -8,11 +8,12 @@ let g:seekBackKey = 'F'
 """ Netrw - this is the culprit behind the me issue ...
 """
 let g:loaded_netrwPlugin  = 1 " Disable built in netrw
-
+let g:netrw_keepdir = 0 " automatically change directories
 
 """
 """ Command T
 """
+"let g:command_t_loaded=1
 let g:CommandTWildIgnore=&wildignore . ",**/*js"
 let g:CommandTMinHeight=15
 let g:CommandTMaxHeight=5
