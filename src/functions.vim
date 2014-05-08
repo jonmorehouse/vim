@@ -81,11 +81,15 @@ endfunction
 
 " Fancy close command for closing out buffers / vim in general
 fu! SmartClose()
+  if &filetype == "mail"
+    quit
+    return
+  endif
   " close command
-  :silent! Bclose
+  silent! Bclose
   " if no file then show the explore command
   if bufname(@%) == ""
-    :Explore
+    Explore
   endif
 
 endfunction
