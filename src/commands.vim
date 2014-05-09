@@ -3,7 +3,6 @@
 "   Initialize general commands mapped off  
 """""""""
 """""""""
-map c :let @/=""<CR><CR>
 map C :let @/=""<CR><CR>
 command! C let @/=""
 
@@ -35,6 +34,7 @@ map T :execute("tabedit  ". @%)<CR>
 map mx :call SmartClose()<CR>
 map mc :close<CR>
 map md :bdelete!<bar>:silent! close<CR>
+map mq :quit<CR>
 
 " close vim! 
 command! Q :quitall!
