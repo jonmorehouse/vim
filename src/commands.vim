@@ -1,6 +1,6 @@
 """""""""
 """""""""
-"   Initialize general commands mapped off  
+"        Initialize general commands mapped off  
 """""""""
 """""""""
 map C :let @/=""<CR><CR>
@@ -33,7 +33,7 @@ command! -nargs=* T :tabedit <args>
 map T :execute("tabedit  ". @%)<CR>
 map mx :call SmartClose()<CR>
 map mc :close<CR>
-map md :bdelete!<bar>:silent! close<CR>
+map md :bdelete!<CR>
 map mq :quit<CR>
 
 " close vim! 
