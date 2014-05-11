@@ -56,8 +56,8 @@ Plugin 'jonmorehouse/gyp.vim'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'tpope/vim-cucumber'
 Plugin 'elzr/vim-json'
-Plugin 'tpope/vim-markdown'
-Plugin 'jonmorehouse/vim-apiary'
+Plugin 'jonmorehouse/vim-markdown' "normal markdown
+Plugin 'jtratner/vim-flavored-markdown' "github markdown 
 Plugin 'sickill/vim-monokai'
 Plugin 'b4winckler/vim-objc'
 

@@ -7,19 +7,19 @@
 filetype plugin indent on
 filetype plugin on
 " Declare the default file type for files with no extensions
-au BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
+au BufNewFile,BufRead * if &ft == '' | setlocal ft=sh | endif
 
 """""""""
 """""""""
 "  Ruby and ruby related file types
 """""""""
 """""""""
-" Ruby project files / settings
+" Ruby project files / setlocaltings
 au BufNewFile,BufRead *rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
 function! RubyConfig()
 
   call ConfigureSpaces(2)
-  set filetype=ruby
+  setlocal filetype=ruby
   noremap <Leader>rr :call CleanShell("ruby " . @%)<CR>
 
 endfunction
@@ -42,8 +42,8 @@ endfunction
 "   CPP / C / Objective-C Filetypes
 """""""""
 """""""""
-au BufNewFile,BufRead *.m,*.h set filetype=objc
-au BufNewFile,BufRead *.pch set filetype=cpp
+au BufNewFile,BufRead *.m,*.h setlocal filetype=objc
+au BufNewFile,BufRead *.pch setlocal filetype=cpp
 
 """""""""
 """""""""
@@ -53,12 +53,12 @@ au BufNewFile,BufRead *.pch set filetype=cpp
 " Vimrc files
 au BufNewFile,BufRead *.vimrc,*.vim call VimConfig()
 function! VimConfig()
-  set filetype=vim
+  setlocal filetype=vim
   call ConfigureSpaces(2)
 endfunction
 
-au BufNewFile,BufRead .shell_config set filetype=sh
-au BufNewFile,BufRead *env,*.exports set filetype=sh 
+au BufNewFile,BufRead .shell_config setlocal filetype=sh
+au BufNewFile,BufRead *env,*.exports setlocal filetype=sh 
 
 au BufNewFile,BufRead *.yml call ConfigureSpaces(2)
 
@@ -71,8 +71,8 @@ au BufRead,BufNewFile * if expand('%') =~ "GHI_ISSUE*" |  call MarkdownConfig() 
 au BufNewFile,BufRead *.md call MarkdownConfig()
 function! MarkdownConfig()
 
-  set filetype=markdown
-  set wrap
+  setlocal filetype=ghmarkdown
+  setlocal wrap
   noremap <Leader>m :call MarkdownHeader("-")<CR>
   noremap <Leader>mm :call MarkdownHeader("=")<CR>
   call ConfigureSpaces(2)
@@ -87,7 +87,7 @@ endfunction
 au BufNewFile,BufRead *py call PythonConfig()
 function! PythonConfig()
 
-  set filetype=python
+  setlocal filetype=python
   call ConfigureSpaces(4)
 
 endfunction
@@ -98,16 +98,16 @@ endfunction
 "   Haskell Project Files
 """""""""
 """""""""
-au BufNewFile,BufRead *.hs set commentstring="--"
+au BufNewFile,BufRead *.hs setlocal commentstring="--"
 
 """""""""
 """""""""
 "    Cloudformation template files
 """""""""
 """""""""
-au BufNewFile,BufRead *.template set filetype=json
+au BufNewFile,BufRead *.template setlocal filetype=json
 au BufNewFile,BufRead *json,*.template,*.ctemplate :call ConfigureSpaces(2)
-au BufNewFile,BufRead *cson,*ctemplate set filetype=coffee
+au BufNewFile,BufRead *cson,*ctemplate setlocal filetype=coffee
 au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureSpaces(2) 
 
 
