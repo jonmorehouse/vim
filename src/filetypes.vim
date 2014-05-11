@@ -17,11 +17,9 @@ au BufNewFile,BufRead * if &ft == '' | setlocal ft=sh | endif
 " Ruby project files / setlocaltings
 au BufNewFile,BufRead *rb,Podfile,Gemfile,Rakefile,Vagrantfile,vagrantfile call RubyConfig()
 function! RubyConfig()
-
   call ConfigureSpaces(2)
   setlocal filetype=ruby
   noremap <Leader>rr :call CleanShell("ruby " . @%)<CR>
-
 endfunction
 
 """""""""
@@ -31,11 +29,9 @@ endfunction
 """""""""
 au BufNewFile,BufRead *feature call CucumberConfig()
 function! CucumberConfig()
-
   call ConfigureSpaces(2)
   noremap <Leader>rc :call CucumberRunner()<CR>
 endfunction
-
 
 """""""""
 """""""""
@@ -78,6 +74,7 @@ function! MarkdownConfig()
   call ConfigureSpaces(2)
 
 endfunction
+au Filetype markdown :call ConfigureSpaces(2)
 
 """""""""
 """""""""
