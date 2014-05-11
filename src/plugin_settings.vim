@@ -13,7 +13,7 @@ let g:netrw_keepdir = 0 " automatically change directories
 """
 """ Command T
 """
-"let g:command_t_loaded=1
+let g:command_t_loaded=1
 let g:CommandTWildIgnore=&wildignore . ",**/*js"
 let g:CommandTMinHeight=15
 let g:CommandTMaxHeight=5

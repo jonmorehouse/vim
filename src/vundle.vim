@@ -41,11 +41,11 @@ Plugin 'rbgrouleff/bclose.vim'
 """     COLORSCHEMES
 """
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'flazz/vim-colorschemes'
-"Plugin 'tomasr/molokai'
-"Plugin 'sickill/vim-monokai'
-"Plugin 'vim-scripts/peaksea'
-"Plugin 'sickill/vim-sunburst'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tomasr/molokai'
+Plugin 'sickill/vim-monokai'
+Plugin 'vim-scripts/peaksea'
+Plugin 'sickill/vim-sunburst'
 
 """
 """     SYNTAX
@@ -57,6 +57,7 @@ Plugin 'jnwhiteh/vim-golang'
 Plugin 'tpope/vim-cucumber'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-markdown'
+Plugin 'jonmorehouse/vim-apiary'
 Plugin 'sickill/vim-monokai'
 Plugin 'b4winckler/vim-objc'
 
@@ -66,18 +67,3 @@ Plugin 'b4winckler/vim-objc'
 Plugin 'dsummersl/vimunit'
 
 
-"""
-"""     RESEARCH / PLAYGROUND
-"""
-"Plugin 'Lokaltog/vim-easymotion'
-" Plugin 'file:///Users/MorehouseJ09/Desktop/vim-tail-bundle'
-"" git wrappers for vim
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'vim-scripts/loremipsum'
-"Plugin 'tpope/vim-surround'
-"" copy / paste buffer
-"Plugin 'vim-scripts/YankRing.vim'
-"" bundle menu for vim
-"Plugin 'mbadran/headlights'
-"" buffer file system explorer
-"Plugin 'sjbach/lusty'
