@@ -119,3 +119,19 @@ fu! ConfigureSpaces(spaces)
   %retab!
 endfunction
 
+fu! SpacesToSpaces(spaces)
+    
+    set noexpandtab
+    %retab!
+    call ConfigureSpaces(a:spaces)
+
+endfunction
+
+fu! SpacesToTabs(size)
+
+  set noexpandtab
+  %retab! 
+  call ConfigureTabs(a:size)
+
+
+endfunction

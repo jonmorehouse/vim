@@ -69,9 +69,7 @@ function! MarkdownConfig()
 
   setlocal filetype=ghmarkdown
   setlocal wrap
-  noremap <Leader>m :call MarkdownHeader("-")<CR>
-  noremap <Leader>mm :call MarkdownHeader("=")<CR>
-  call ConfigureSpaces(2)
+  call ConfigureSpaces(4)
 
 endfunction
 au Filetype markdown :call ConfigureSpaces(2)
