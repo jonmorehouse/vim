@@ -90,7 +90,7 @@ map cp :cp<CR>
 """ 
 """ General mappings
 """
-map mm :! <CR>
+map mm :!! <CR>
 
 
 
