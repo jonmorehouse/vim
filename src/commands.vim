@@ -87,5 +87,11 @@ map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim 
 map cn :cn<CR>
 map cp :cp<CR>
 
+""" 
+""" General mappings
+"""
+map mm :! <CR>
+
+
 
 

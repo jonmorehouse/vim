@@ -72,7 +72,7 @@ function! MarkdownConfig()
   call ConfigureSpaces(4)
 
 endfunction
-au Filetype markdown :call ConfigureSpaces(2)
+au Filetype markdown :call ConfigureSpaces(4)
 
 """""""""
 """""""""
