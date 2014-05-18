@@ -47,11 +47,9 @@ map Q :quitall!<CR>
 """"""""
 " reset the basepath
 map me :call CDBasePath()<CR>
-command! E :call CDBasePath()
 
 " navigate to the secondary path
 map ms :call CDSecondaryPath()<CR>
-command! SE :call CDSecondaryPath()
 
 """"""""
 """"""""
@@ -61,6 +59,7 @@ command! SE :call CDSecondaryPath()
 cabbrev s <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'wall' : 's')<CR>
 cabbrev dd <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? '1,$d' : 'dd')<CR>
 cabbrev qq <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quitall' : 'qq')<CR>
+cabbrev bb <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'buffers' : 'bb')<CR>
 
 """
 """ Normal mode mappings
@@ -91,7 +90,5 @@ map cp :cp<CR>
 """ General mappings
 """
 map mm :!! <CR>
-
-
 
 

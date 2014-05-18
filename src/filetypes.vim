@@ -55,8 +55,8 @@ endfunction
 
 au BufNewFile,BufRead .shell_config setlocal filetype=sh
 au BufNewFile,BufRead *env,*.exports setlocal filetype=sh 
-
 au BufNewFile,BufRead *.yml call ConfigureSpaces(2)
+au BufNewFile,BufRead *sh call ConfigureSpaces(4)
 
 """""""""
 """""""""

@@ -20,4 +20,3 @@ call BootstrapPath("personal.vim")
 " bootstrap any startup commands
 call BootstrapPath("bootstrap.vim")
 
-

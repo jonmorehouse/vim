@@ -10,7 +10,6 @@ let mapleader = ","
 "   Initialize Buffer shortcuts
 """""""""
 """""""""
-noremap <Leader>bb :buffers<CR>
 map <Leader>b :buffers<CR>
 noremap <Leader>jj :BufSurfBack<CR>
 noremap <Leader>kk :BufSurfForward<CR>
