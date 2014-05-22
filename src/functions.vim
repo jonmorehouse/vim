@@ -133,5 +133,4 @@ fu! SpacesToTabs(size)
   %retab! 
   call ConfigureTabs(a:size)
 
-
 endfunction
