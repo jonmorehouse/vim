@@ -47,7 +47,7 @@ map ga :Gcommit -a <CR>
 map gi :Git 
 map gp :Git pf <CR>
 " use hub
-let g:fugitive_git_executable = '/usr/local/bin/hub'
+let g:fugitive_git_executable = substitute(system("which hub"), '\n', '', '')
 
 """
 """ VimHub Mappings / Configuration
