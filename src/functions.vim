@@ -66,7 +66,7 @@ if !exists("*Reload")
     let path=@%
     set autoread
     so $HOME/.vim/vimrc
-    call Runner#Bootstrap()
+    call runner#Bootstrap()
     execute "edit ". path
   endfunction
 endif

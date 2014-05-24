@@ -66,7 +66,17 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " Initialize color scheme for application
 syntax enable
-let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
+
+" initialze based upon terminal settings
+if $OS == "mac"
+  let g:solarized_termcolors=256
+else " linux variant. Assume terminal is using 16 bit colors and has solarized pallette
+  let g:solarized_termtrans=1
+  let g:solarized_visibility="high"
+  let g:solarized_contrast="high"
+  hi Normal ctermbg=NONE
+endif
+
 
