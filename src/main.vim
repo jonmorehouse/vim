@@ -44,6 +44,9 @@ set showmatch
 set matchtime=1
 set modifiable
 
+" this helped solve the creating temp file issue I was having
+set shell=/bin/sh
+
 " formatting helpers
 vmap Q gq
 nmap Q gqap
