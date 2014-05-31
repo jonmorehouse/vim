@@ -31,14 +31,16 @@ Installing Command-T
 --------------------
 
 ~~~ sh
-cd bundle/Command-T && vim command-t.vba -c ":so %" +qall
-cd ruby/command-t 
-ruby extconf.rb
-make
+$ cd bundle/Command-T && vim command-t.vba -c ":so %" +qall
+$ cd ruby/command-t 
+$ ruby extconf.rb
+$ make
 
-# if having issues (mac) make sure you are using clang 
+# if having issues (mac) make sure you are using clang as CC
 # make sure environment is the same as when installing vim
-brew uninstall vim && brew install vim && ruby extconf.rb && make
+
+$ export CC=`which clang`
+$ brew uninstall vim && brew install vim && ruby extconf.rb && make
 ~~~
 
 
