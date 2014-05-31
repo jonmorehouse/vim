@@ -27,7 +27,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/TwitVim'
 Plugin 'jonmorehouse/vim-tmux'
 
-
 """
 """     NAVIGATION
 """
