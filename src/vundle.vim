@@ -50,6 +50,7 @@ Plugin 'sickill/vim-sunburst'
 """
 """     SYNTAX
 """
+Plugin 'cespare/vim-toml'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jonmorehouse/gyp.vim'
