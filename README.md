@@ -1,10 +1,8 @@
-Vim Configuration
-=================
+# Vim Configuration
 
 This vim configuration lives at `$HOME/.vim`
 
-Getting Started
----------------
+## Getting Started
 
 ~~~ sh
 # clone repository as well as vundle submodule
@@ -18,8 +16,7 @@ ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 
 ~~~
 
-Custom Configuration
---------------------
+## Custom Configuration
 
 Add in local vim settings
 ~~~ vim
@@ -27,8 +24,7 @@ Add in local vim settings
 map <Leader> pp echo "CUSTOM COMMAND"
 ~~~
 
-Installing Command-T
---------------------
+## Installing Command-T
 
 ~~~ sh
 $ cd bundle/Command-T && vim command-t.vba -c ":so %" +qall
@@ -38,7 +34,7 @@ $ make
 
 # if having issues (mac) make sure you are using clang as CC
 # make sure environment is the same as when installing vim
-
+# I recommend building this before installing rvm or homebrew-ruby
 $ export CC=`which clang`
 $ brew uninstall vim && brew install vim && ruby extconf.rb && make
 ~~~
