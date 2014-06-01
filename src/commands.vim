@@ -90,3 +90,12 @@ map cp :cp<CR>
 """
 map mm :!! <CR>
 
+"""
+""" Command prompt mappings
+"""
+nnoremap ; :
+nnoremap ;; q:
+nnoremap ? q/i
+
+
+
