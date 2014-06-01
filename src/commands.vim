@@ -6,7 +6,6 @@
 map C :let @/=""<CR><CR>
 command! C let @/=""
 
-
 " set up and alias to help with saving / reading to clipboard
 command! W :w ! pbcopy
 map W :w ! pbcopy<CR>
@@ -90,5 +89,4 @@ map cp :cp<CR>
 """ General mappings
 """
 map mm :!! <CR>
-
 

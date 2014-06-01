@@ -9,6 +9,7 @@ call vundle#rc()
 """
 """     UTILITIES
 """
+Plugin 'jonmorehouse/vim-utilities'
 Plugin 'jonmorehouse/netrw.vim'
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'

@@ -104,4 +104,3 @@ au BufNewFile,BufRead *json,*.template,*.ctemplate :call ConfigureSpaces(2)
 au BufNewFile,BufRead *cson,*ctemplate setlocal filetype=coffee
 au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureSpaces(2) 
 
-

@@ -61,12 +61,14 @@ endfunction
 "    GENERAL UTILITIES 
 """""""""
 """""""""
+" don't redeclare Reload after the first vim bootup (ie: when you called Reload)
 if !exists("*Reload")
-  fu Reload()
+  fu! Reload()
     let path=@%
     set autoread
-    so $HOME/.vim/vimrc
-    call runner#Bootstrap()
+    silent so $HOME/.vim/vimrc
+    call utilities#Bootstrap()
+    echo "Vim reloaded ...\n"
     execute "edit ". path
   endfunction
 endif
