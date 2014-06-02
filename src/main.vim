@@ -57,6 +57,8 @@ nmap Q gqap
 """"""""
 " ensure that we safely change the directory to the current buffer as changing
 autocmd BufEnter * silent! lcd %:p:h
+" always start normal window on the last line used
+autocmd CmdwinEnter * :execute 'normal dd'
 
 """""""""
 """""""""
