@@ -28,14 +28,6 @@ fu! CommandTWrapper()
   endif
 endfunction
 
-
-"""
-""" ConqueTerm Settings
-"""
-let g:ConqueTerm_ReadUnfocused = 1
-let g:ConqueTerm_CloseOnEnd = 0
-let g:ConqueTerm_InsertOnEnter = 0
-
 """
 """ Vim Fugitive Mappings
 """
@@ -62,4 +54,14 @@ map mn :Gissue
 " always clear the screen after running (so we don't have old results etc)
 map mg :Google 
 map mgf :Googlef 
+
+"""
+""" Vim Flow Settings
+"""
+let g:flow_use_tmux=1
+let g:flow_clean = "true"
+map <Leader>, :Flow<CR>
+map <Leader>l :FlowLock<CR>
+map <Leader>r :FlowTest<CR>
+
 
