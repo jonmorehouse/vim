@@ -19,7 +19,7 @@ Plugin 'sjl/clam.vim'
 """
 """     WorkFlow 
 """
-Plugin 'jonmorehouse/vim-runner'
+Plugin 'jonmorehouse/vim-flow'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'jonmorehouse/vim-g'
 Plugin 'jonmorehouse/vim-open'
