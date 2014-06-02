@@ -58,10 +58,10 @@ map mgf :Googlef
 """
 """ Vim Flow Settings
 """
-let g:flow_use_tmux=1
+let g:flow_use_tmux=0
 let g:flow_clean = "true"
 map <Leader>, :Flow<CR>
 map <Leader>l :FlowLock<CR>
-map <Leader>r :FlowTest<CR>
+map <Leader>r :FlowAlt<CR>
 
 
