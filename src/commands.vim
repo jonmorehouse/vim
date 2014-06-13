@@ -21,7 +21,6 @@ command! WW :w !sudo tee %
 command! Reload :call Reload()
 command! S :call Reload()
 
-
 """""""""
 """""""""
 "        Window / Buffer Management Shortcuts
@@ -46,7 +45,6 @@ map Q :quitall!<CR>
 """"""""
 " reset the basepath
 map me :call CDBasePath()<CR>
-
 " navigate to the secondary path
 map ms :call CDSecondaryPath()<CR>
 
@@ -97,5 +95,7 @@ nnoremap ; :
 nnoremap ;; q:
 nnoremap ? q/i
 
-
-
+"""
+""" 
+"""
+command! Temp :execute ":e ". tempname() . "| :set filetype=md" 

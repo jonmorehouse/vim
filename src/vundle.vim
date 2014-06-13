@@ -15,6 +15,8 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'sjl/clam.vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-vinegar'
 
 """
 """     WorkFlow 

@@ -50,3 +50,5 @@ map <Leader>h :wincmd h<CR>
 map <Leader>k :wincmd k<CR>
 map <Leader>l :wincmd l<CR>
 
+
+
