@@ -7,26 +7,7 @@ let g:seekBackKey = 'F'
 """
 """ Netrw - this is the culprit behind the me issue ...
 """
-let g:loaded_netrwPlugin  = 1 " Disable built in netrw
-let g:netrw_keepdir = 0 " automatically change directories
-
-"""
-""" Command T
-"""
-"let g:command_t_loaded=1
-let g:CommandTWildIgnore=&wildignore . ",**/*js"
-let g:CommandTMinHeight=15
-let g:CommandTMaxHeight=5
-map <Leader>t :call CommandTWrapper()<CR>
-" always call command t from the base path
-fu! CommandTWrapper()
-  if !exists("g:basePath")
-    CommandT
-  else
-    let command=":CommandT " . g:basePath
-    execute command
-  endif
-endfunction
+let g:loaded_netrwPlugin=1 " Disable built in netrw
 
 """
 """ Vim Fugitive Mappings
@@ -64,4 +45,13 @@ map <Leader>, :Flow<CR>
 map <Leader>l :FlowLock<CR>
 map <Leader>r :FlowAlt<CR>
 
+"""
+""" Vim Filer
+"""
+let g:vimfiler_enable_auto_cd=1
+let g:vimfiler_as_default_explorer=1
+let g:vimfiler_safe_mode_by_default=0
+let g:vimfiler_ignore_pattern=0 
+let g:vimfiler_force_overwrite_statusline=1
+"autocmd vimfiler nunmap -<SPACE>
 

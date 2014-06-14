@@ -10,13 +10,11 @@ call vundle#rc()
 """     UTILITIES
 """
 Plugin 'jonmorehouse/vim-utilities'
-Plugin 'jonmorehouse/netrw.vim'
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'sjl/clam.vim'
 Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-vinegar'
 
 """
 """     WorkFlow 
@@ -33,7 +31,8 @@ Plugin 'jonmorehouse/vim-tmux'
 """
 """     NAVIGATION
 """
-Plugin 'wincent/Command-T'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimfiler.vim'
 Plugin 'goldfeld/vim-seek'
 Plugin 'ton/vim-bufsurf'
 Plugin 'nathanaelkane/vim-indent-guides'

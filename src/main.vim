@@ -28,7 +28,7 @@ set incsearch
 set history=1000
 set undolevels=1000
 set wildignore+=*.swp,*.ds_store,*.pyc,*.class,*.DS_Store
-set wildignore+=*.o,*.obj,.git,node_modules
+set wildignore+=*.o,*.obj
 set title
 set visualbell
 set noerrorbells
