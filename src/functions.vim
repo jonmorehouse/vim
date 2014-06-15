@@ -90,7 +90,7 @@ fu! SmartClose()
   silent! Bclose
   " if no file then show the explore command
   if bufname(@%) == ""
-    Explore
+    VimFiler
   endif
 
 endfunction

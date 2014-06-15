@@ -1,14 +1,12 @@
-if [ $OS = "mac" ]; then
-    brew install vim --with-python3
-else
-    # install ruby dependencies
+#!/usr/bin/env zsh
+
+# install on linux
+if [[ $OS == "linux" ]];then
     sudo apt-get install -y ruby ruby-dev vim
 fi
 
-# clone repository to the correct place
-if [[ ! -d $HOME/.vim ]];then
-  git clone --recursive git@github.com:jonmorehouse/vim ~/.vim
-fi
+ln -sf $HOME/.vim/vimrc $HOME/.vimrc
+git submodule update --init --recursive
 
 # now install the dependencies
 vim +PluginInstall +qall
