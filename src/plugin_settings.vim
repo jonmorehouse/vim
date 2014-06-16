@@ -53,5 +53,5 @@ let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
 let g:vimfiler_ignore_pattern=0 
 let g:vimfiler_force_overwrite_statusline=1
-"autocmd vimfiler nunmap -<SPACE>
-
+" make sure vimfiler windows work correctly with vim-fugitive
+autocmd Filetype vimfiler call fugitive#detect(getcwd())
