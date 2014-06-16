@@ -18,10 +18,17 @@ cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
 " easier git commits
 map ga :Gcommit -a <CR>
 map gp :Git pf <CR>
-" use hub
 let g:fugitive_git_executable = substitute(system("which hub"), '\n', '', '')
 map gi :!hub 
-autocmd Filetype gitcommit map mq execute ":w | :close"
+" map git commit filetypes so only have to exit and it auto saves
+fu! GitCommitHook()
+  if &modifiable == 1
+    echo "is modifiedable"
+    map <Buffer> mq :execute ":w | :close"
+  endif
+endfunction
+"autocmd Filetype gitcommit :call GitCommitHook()
+
 
 """
 """ VimHub Mappings / Configuration
@@ -49,6 +56,7 @@ map <Leader>r :FlowAlt<CR>
 """
 """ Vim Filer
 """ 
+" map escape to call the correct file / directory in vimfiler - or l
 let g:vimfiler_enable_auto_cd=1
 let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
