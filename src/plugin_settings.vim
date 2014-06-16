@@ -21,6 +21,7 @@ map gp :Git pf <CR>
 " use hub
 let g:fugitive_git_executable = substitute(system("which hub"), '\n', '', '')
 map gi :!hub 
+autocmd Filetype gitcommit map mq execute ":w | :close"
 
 """
 """ VimHub Mappings / Configuration
