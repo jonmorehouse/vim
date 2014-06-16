@@ -29,7 +29,6 @@ fu! GitCommitHook()
 endfunction
 "autocmd Filetype gitcommit :call GitCommitHook()
 
-
 """
 """ VimHub Mappings / Configuration
 """
@@ -51,7 +50,7 @@ let g:flow_use_tmux=0
 let g:flow_clean = "true"
 map <Leader>, :Flow<CR>
 map <Leader>l :FlowLock<CR>
-map <Leader>r :FlowAlt<CR>
+map <Leader>t :Flow test<CR>
 
 """
 """ Vim Filer
@@ -65,3 +64,5 @@ let g:vimfiler_force_overwrite_statusline=1
 " make sure vimfiler windows work correctly with vim-fugitive
 autocmd Filetype vimfiler call fugitive#detect(getcwd())
 map E :VimFiler<CR>
+
+
