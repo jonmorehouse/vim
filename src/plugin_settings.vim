@@ -17,10 +17,10 @@ command! -nargs=* G :Git <args> | :execute("silent ! \"clear\"") | :redraw!
 cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
 " easier git commits
 map ga :Gcommit -a <CR>
-map gi :Git 
 map gp :Git pf <CR>
 " use hub
 let g:fugitive_git_executable = substitute(system("which hub"), '\n', '', '')
+map gi :!git 
 
 """
 """ VimHub Mappings / Configuration
