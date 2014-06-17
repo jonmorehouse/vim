@@ -47,6 +47,9 @@ set modifiable
 " this helped solve the creating temp file issue I was having
 set shell=/bin/sh
 
+" dont automatically add in comments for new lines when on a comment line
+set formatoptions-=cro
+
 " formatting helpers
 vmap Q gq
 nmap Q gqap
