@@ -64,5 +64,7 @@ let g:vimfiler_force_overwrite_statusline=1
 " make sure vimfiler windows work correctly with vim-fugitive
 autocmd Filetype vimfiler call fugitive#detect(getcwd())
 map E :VimFiler<CR>
+let g:vimfiler_execute_file_list = {}
+let g:vimfiler_execute_file_list['_'] = 'vim'
 
 

@@ -48,6 +48,9 @@ set modifiable
 set shell=/bin/sh
 
 " dont automatically add in comments for new lines when on a comment line
+"set formatoptions-=c,r,o
+"autocmd * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd BufEnter setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set formatoptions-=cro
 
 " formatting helpers

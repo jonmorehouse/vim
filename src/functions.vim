@@ -34,7 +34,7 @@ fu! CDSecondaryPath()
     return
   endif
   " if it does exist then we want to open the base dir 
-  execute "edit " . g:secondaryPath
+  execute "VimFiler " . expand(g:secondaryPath)
 endfunction
 
 " do nothing if the basePath dt reset path to the current path
@@ -53,7 +53,7 @@ fu! CDBasePath()
   if !exists("g:basePath")
     return
   endif
-  execute "edit " . g:basePath  
+  execute "VimFiler " . expand(g:basePath)
 endfunction
 
 """""""""
