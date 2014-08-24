@@ -31,6 +31,7 @@ Plugin 'jonmorehouse/vim-tmux'
 """
 """     NAVIGATION
 """
+Plugin 'vim-scripts/camelcasemotion'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'goldfeld/vim-seek'

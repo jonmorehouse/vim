@@ -27,7 +27,7 @@ command! S :call Reload()
 """""""""
 """""""""
 " new tab shortcut
-map T :execute(":tabedit ". g:basePath)<CR>
+map T :execute(":tabedit %")<CR>
 command! T :execute(":tabedit ". g:basePath)
 map mx :call SmartClose()<CR>
 map mc :close<CR>
