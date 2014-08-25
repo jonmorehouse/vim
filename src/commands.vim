@@ -100,3 +100,4 @@ nnoremap ? q/i
 """ 
 """
 command! Temp :execute ":e ". tempname() . "| :set filetype=md" 
+

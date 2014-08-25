@@ -25,6 +25,8 @@ Plugin 'jonmorehouse/vim-g'
 Plugin 'jonmorehouse/vim-open'
 Plugin 'jonmorehouse/vimhub'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
 Plugin 'vim-scripts/TwitVim'
 Plugin 'jonmorehouse/vim-tmux'
 
