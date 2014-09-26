@@ -69,12 +69,6 @@ noremap ;; ;
 """
 """ Copy mappings
 """
-map 1 "ay
-map 2 "ax
-map 3 "ap
-map 4 "by
-map 5 "bx
-map 6 "bp
 " http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
 map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
 
@@ -99,5 +93,11 @@ nnoremap ? q/i
 """
 """ 
 """
-command! Temp :execute ":e ". tempname() . "| :set filetype=md" 
+"command! -nargs=* Temp :execute ":e ". Tempfile("hi")
+command! -nargs=* Temp :execute ":e " . Tempfile(<f-args>)
+
+
+
+
+
 

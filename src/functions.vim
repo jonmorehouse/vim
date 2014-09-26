@@ -12,6 +12,15 @@ fu! GetVisualSelection()
   return join(lines, "\n")
 endfunction
 
+fu! Tempfile(...)
+  let extension="md"
+  if a:0 == 1
+    let extension=a:1
+  end
+
+  return tempname() . "." . extension
+endfunction
+
 """""""""
 """""""""
 "        PATH UTILTIES
