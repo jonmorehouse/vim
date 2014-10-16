@@ -28,6 +28,7 @@ command! S :call Reload()
 """""""""
 " new tab shortcut
 map t :execute(":tabedit %")<CR>
+map t :execute(":tab sb ". bufnr('%'))<CR>
 map T :execute(":tabedit ". g:basePath)<CR>
 command! T :execute(":tabedit ". g:basePath)
 map mx :call SmartClose()<CR>
