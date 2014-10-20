@@ -65,6 +65,7 @@ au BufNewFile,BufRead *sh call ConfigureSpaces(2)
 """""""""
 au BufRead,BufNewFile * if expand('%') =~ "GHI_ISSUE*" |  call MarkdownConfig() | endif
 au BufNewFile,BufRead *.md call MarkdownConfig()
+au BufNewFile,BufRead .idea call MarkdownConfig()
 function! MarkdownConfig()
 
   setlocal filetype=ghmarkdown
