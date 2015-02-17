@@ -54,6 +54,7 @@ Plugin 'sickill/vim-sunburst'
 """
 """     SYNTAX
 """
+Plugin 'Keithbsmiley/swift.vim'
 Plugin 'kylef/apiblueprint.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'ekalinin/Dockerfile.vim'
