@@ -90,6 +90,13 @@ endfunction
 
 """""""""
 """""""""
+"   Golang
+"""""""""
+"""""""""
+au BufNewFile,BufRead *go call ConfigureTabs(8)
+
+"""""""""
+"""""""""
 "   Haskell Project Files
 """""""""
 """""""""

@@ -52,6 +52,9 @@ set shell=/bin/sh
 "autocmd * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufEnter setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set formatoptions-=cro
+" add in column count to status bar
+set statusline+=col:\ %c 
+set statusline+=\ %F
 
 " formatting helpers
 vmap Q gq
