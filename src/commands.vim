@@ -68,21 +68,19 @@ nmap ; :
 noremap ;; ;
 
 """
-""" Copy mappings
+""" Copy / Search Mappings
 """
 " http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
 map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
+" search for the highlighted text
+" this allows you to do then %s//replacement/g
+vnoremap // y/<C-R>"<CR>
 
 """
 """ QuickFix Mappings
 """
 map cn :cn<CR>
 map cp :cp<CR>
-
-""" 
-""" General mappings
-"""
-map mm :!! <CR>
 
 """
 """ Command prompt mappings
@@ -92,9 +90,8 @@ nnoremap ;; q:
 nnoremap ? q/i
 
 """
-""" 
+""" Tempfile command
 """
-"command! -nargs=* Temp :execute ":e ". Tempfile("hi")
 command! -nargs=* Temp :execute ":e " . Tempfile(<f-args>)
 
 
