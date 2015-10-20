@@ -93,7 +93,7 @@ endfunction
 "   Golang
 """""""""
 """""""""
-au BufNewFile,BufRead *go call ConfigureTabs(8)
+au BufNewFile,BufRead *go call ConfigureSpaces(8)
 
 """""""""
 """""""""
@@ -109,6 +109,7 @@ au BufNewFile,BufRead *.hs setlocal commentstring="--"
 """""""""
 au BufNewFile,BufRead *.template setlocal filetype=json
 au BufNewFile,BufRead *json,*.template,*.ctemplate :call ConfigureSpaces(2)
+au BufNewFile,BufRead *.sql :call ConfigureSpaces(2)
 au BufNewFile,BufRead *cson,*ctemplate setlocal filetype=coffee
 au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureSpaces(2) 
 

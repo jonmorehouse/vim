@@ -67,6 +67,7 @@ Plugin 'jonmorehouse/vim-markdown' "normal markdown
 Plugin 'jtratner/vim-flavored-markdown' "github markdown 
 Plugin 'sickill/vim-monokai'
 Plugin 'b4winckler/vim-objc'
+Plugin 'markcornick/vim-terraform'
 
 """
 """     PLUGIN DEVELOPMENT
