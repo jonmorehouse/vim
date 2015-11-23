@@ -93,7 +93,8 @@ endfunction
 "   Golang
 """""""""
 """""""""
-au BufNewFile,BufRead *go call ConfigureSpaces(8)
+au BufNewFile,BufRead,BufWrite *go call ConfigureTabs(8)
+let g:go_fmt_command = "goimports"
 
 """""""""
 """""""""

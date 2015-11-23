@@ -12,20 +12,16 @@ call vundle#rc()
 Plugin 'jonmorehouse/vim-utilities'
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-scripts/Conque-Shell'
-Plugin 'sjl/clam.vim'
-Plugin 'tpope/vim-eunuch'
+Plugin 'fatih/vim-go'
 
 """
 """     WorkFlow 
 """
 Plugin 'jonmorehouse/vim-flow'
 Plugin 'vim-scripts/localrc.vim'
-Plugin 'jonmorehouse/vim-g'
 Plugin 'jonmorehouse/vim-open'
 Plugin 'jonmorehouse/vimhub'
 Plugin 'tpope/vim-fugitive'
-Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'vim-scripts/TwitVim'
 Plugin 'jonmorehouse/vim-tmux'

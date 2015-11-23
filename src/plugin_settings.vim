@@ -15,6 +15,7 @@ let g:loaded_netrwPlugin=1 " Disable built in netrw
 " always clear the screen after running (so we don't have old results etc)
 command! -nargs=* G :Git <args> | :execute("silent ! \"clear\"") | :redraw!
 cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
+
 " easier git commits
 map ga :Gcommit -a <CR>
 map gp :Git pf <CR>
@@ -35,13 +36,6 @@ endfunction
 map mi :Gissues 
 map ml :Gissues <CR>
 map mn :Gissue 
-
-"""
-""" Vim Google Mappings
-"""
-" always clear the screen after running (so we don't have old results etc)
-map mg :Google 
-map mgf :Googlef 
 
 """
 """ Vim Gist Settings
@@ -73,5 +67,11 @@ autocmd Filetype vimfiler call fugitive#detect(getcwd())
 map E :VimFiler<CR>
 let g:vimfiler_execute_file_list = {}
 let g:vimfiler_execute_file_list['_'] = 'vim'
+
+"
+"""
+""" Vim Go
+"""
+let g:go_fmt_command = "goimports"
 
 
