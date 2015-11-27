@@ -20,8 +20,8 @@ Plugin 'fatih/vim-go'
 Plugin 'jonmorehouse/vim-flow'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'jonmorehouse/vim-open'
-Plugin 'jonmorehouse/vimhub'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'vim-scripts/TwitVim'
 Plugin 'jonmorehouse/vim-tmux'
@@ -64,6 +64,7 @@ Plugin 'jtratner/vim-flavored-markdown' "github markdown
 Plugin 'sickill/vim-monokai'
 Plugin 'b4winckler/vim-objc'
 Plugin 'markcornick/vim-terraform'
+Plugin 'rust-lang/rust.vim'
 
 """
 """     PLUGIN DEVELOPMENT

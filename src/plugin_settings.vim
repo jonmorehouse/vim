@@ -30,12 +30,12 @@ fu! GitCommitHook()
 endfunction
 "autocmd Filetype gitcommit :call GitCommitHook()
 
-"""
-""" VimHub Mappings / Configuration
-"""
-map mi :Gissues 
-map ml :Gissues <CR>
-map mn :Gissue 
+""""
+"""" VimHub Mappings / Configuration
+""""
+"map mi :Gissues 
+"map ml :Gissues <CR>
+"map mn :Gissue 
 
 """
 """ Vim Gist Settings
@@ -68,10 +68,13 @@ map E :VimFiler<CR>
 let g:vimfiler_execute_file_list = {}
 let g:vimfiler_execute_file_list['_'] = 'vim'
 
-"
 """
 """ Vim Go
 """
 let g:go_fmt_command = "goimports"
 
+"""
+""" Vimmarks
+"""
+let g:vimmarks_debug = 1
 
