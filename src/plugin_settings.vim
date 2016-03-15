@@ -71,7 +71,7 @@ let g:vimfiler_execute_file_list['_'] = 'vim'
 """
 """ Vim Go
 """
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "gofmt"
 
 """
 """ Vimmarks

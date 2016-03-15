@@ -93,9 +93,3 @@ nnoremap ? q/i
 """ Tempfile command
 """
 command! -nargs=* Temp :execute ":e " . Tempfile(<f-args>)
-
-
-
-
-
-

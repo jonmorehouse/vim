@@ -11,9 +11,8 @@ call BootstrapPath("functions.vim")
 
 " configure vim as needed
 call BootstrapPath("main.vim")
-call BootstrapPath("filetypes.vim")
 call BootstrapPath("commands.vim")
 call BootstrapPath("leader_commands.vim")
+call BootstrapPath("filetypes.vim")
 call BootstrapPath("plugin_settings.vim")
 call BootstrapPath("personal.vim")
-

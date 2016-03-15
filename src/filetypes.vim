@@ -82,10 +82,8 @@ au Filetype markdown :call ConfigureSpaces(2)
 """""""""
 au BufNewFile,BufRead *py call PythonConfig()
 function! PythonConfig()
-
   setlocal filetype=python
   call ConfigureSpaces(4)
-
 endfunction
 
 """""""""
@@ -113,4 +111,3 @@ au BufNewFile,BufRead *json,*.template,*.ctemplate :call ConfigureSpaces(2)
 au BufNewFile,BufRead *.sql :call ConfigureSpaces(2)
 au BufNewFile,BufRead *cson,*ctemplate setlocal filetype=coffee
 au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureSpaces(2) 
-

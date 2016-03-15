@@ -30,6 +30,7 @@ set undolevels=1000
 set wildignore+=*.swp,*.ds_store,*.pyc,*.class,*.DS_Store
 set wildignore+=*.o,*.obj
 set title
+set ruler
 set visualbell
 set noerrorbells
 set nobackup
@@ -55,6 +56,7 @@ set formatoptions-=cro
 " add in column count to status bar
 set statusline+=col:\ %c 
 set statusline+=\ %F
+set colorcolumn=120
 
 " formatting helpers
 vmap Q gq
@@ -83,4 +85,3 @@ let g:solarized_termtrans=1
 let g:solarized_visibility="high"
 let g:solarized_contrast="high"
 colorscheme solarized
-
