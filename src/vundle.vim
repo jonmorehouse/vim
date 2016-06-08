@@ -14,6 +14,8 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'fatih/vim-go'
 Plugin 'godlygeek/tabular'
+""" NOTE move this to github later
+Plugin 'jonmorehouse/vim-nav'
 
 """
 """     WorkFlow 
