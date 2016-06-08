@@ -104,6 +104,7 @@ fu! SmartClose()
 
 endfunction
 
+
 """""""""
 """""""""
 "    File Utilities
@@ -144,5 +145,3 @@ fu! SpacesToTabs(size)
   call ConfigureTabs(a:size)
 
 endfunction
-
-

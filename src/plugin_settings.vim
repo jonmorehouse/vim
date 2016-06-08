@@ -47,11 +47,8 @@ let g:gist_open_browser_after_post = 1
 """
 """ Vim Flow Settings
 """
-let g:flow_use_tmux=0
-let g:flow_clean = "true"
-map <Leader>, :Flow<CR>
-map <Leader>l :FlowLock<CR>
-map <Leader>t :Flow test<CR>
+map <Leader>, :FlowRun<CR>
+map <Leader>l :FlowToggle<CR>
 
 """
 """ Vim Filer
@@ -62,19 +59,20 @@ let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
 let g:vimfiler_ignore_pattern=0 
 let g:vimfiler_force_overwrite_statusline=1
+
 " make sure vimfiler windows work correctly with vim-fugitive
 autocmd Filetype vimfiler call fugitive#detect(getcwd())
 map E :VimFiler<CR>
 let g:vimfiler_execute_file_list = {}
 let g:vimfiler_execute_file_list['_'] = 'vim'
 
+
 """
 """ Vim Go
 """
-let g:go_fmt_command = "gofmt"
+let g:go_fmt_command = "goimports"
 
 """
 """ Vimmarks
 """
 let g:vimmarks_debug = 1
-

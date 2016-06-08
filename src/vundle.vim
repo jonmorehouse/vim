@@ -13,6 +13,7 @@ Plugin 'jonmorehouse/vim-utilities'
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'fatih/vim-go'
+Plugin 'godlygeek/tabular'
 
 """
 """     WorkFlow 
@@ -20,11 +21,13 @@ Plugin 'fatih/vim-go'
 Plugin 'jonmorehouse/vim-flow'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'jonmorehouse/vim-open'
+Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'vim-scripts/TwitVim'
 Plugin 'jonmorehouse/vim-tmux'
+Plugin 'christoomey/vim-conflicted'
 
 """
 """     NAVIGATION
@@ -51,24 +54,13 @@ Plugin 'sickill/vim-sunburst'
 """     SYNTAX
 """
 Plugin 'Keithbsmiley/swift.vim'
-Plugin 'kylef/apiblueprint.vim'
+Plugin 'b4winckler/vim-objc'
 Plugin 'cespare/vim-toml'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'jonmorehouse/gyp.vim'
 Plugin 'jnwhiteh/vim-golang'
-Plugin 'tpope/vim-cucumber'
 Plugin 'elzr/vim-json'
 Plugin 'jonmorehouse/vim-markdown' "normal markdown
 Plugin 'jtratner/vim-flavored-markdown' "github markdown 
 Plugin 'sickill/vim-monokai'
-Plugin 'b4winckler/vim-objc'
 Plugin 'markcornick/vim-terraform'
 Plugin 'rust-lang/rust.vim'
-
-"""
-"""     PLUGIN DEVELOPMENT
-"""
-Plugin 'dsummersl/vimunit'
-
-

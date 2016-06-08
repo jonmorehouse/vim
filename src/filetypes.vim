@@ -6,6 +6,7 @@
 "help with file types
 filetype plugin indent on
 filetype plugin on
+
 " Declare the default file type for files with no extensions
 au BufNewFile,BufRead * if &ft == '' | setlocal ft=sh | endif
 
@@ -20,17 +21,6 @@ function! RubyConfig()
   call ConfigureSpaces(2)
   setlocal filetype=ruby
   noremap <Leader>rr :call CleanShell("ruby " . @%)<CR>
-endfunction
-
-"""""""""
-"""""""""
-"
-"""""""""
-"""""""""
-au BufNewFile,BufRead *feature call CucumberConfig()
-function! CucumberConfig()
-  call ConfigureSpaces(2)
-  noremap <Leader>rc :call CucumberRunner()<CR>
 endfunction
 
 """""""""
@@ -57,6 +47,7 @@ au BufNewFile,BufRead .shell_config setlocal filetype=sh
 au BufNewFile,BufRead *env,*.exports setlocal filetype=sh 
 au BufNewFile,BufRead *.yml call ConfigureSpaces(2)
 au BufNewFile,BufRead *sh call ConfigureSpaces(2)
+au BufNewFile,BufRead *tf call ConfigureSpaces(4)
 
 """""""""
 """""""""
@@ -92,7 +83,16 @@ endfunction
 """""""""
 """""""""
 au BufNewFile,BufRead,BufWrite *go call ConfigureTabs(8)
-let g:go_fmt_command = "goimports"
+
+"""""""""
+"""""""""
+"   Vimfiler
+"""""""""
+"""""""""
+au BufNew,BufRead,BufWrite vimfiler* call Test()
+function! Test()
+  echo "hello"
+endfunction
 
 """""""""
 """""""""
@@ -101,13 +101,4 @@ let g:go_fmt_command = "goimports"
 """""""""
 au BufNewFile,BufRead *.hs setlocal commentstring="--"
 
-"""""""""
-"""""""""
-"    Cloudformation template files
-"""""""""
-"""""""""
-au BufNewFile,BufRead *.template setlocal filetype=json
-au BufNewFile,BufRead *json,*.template,*.ctemplate :call ConfigureSpaces(2)
-au BufNewFile,BufRead *.sql :call ConfigureSpaces(2)
-au BufNewFile,BufRead *cson,*ctemplate setlocal filetype=coffee
-au BufNewFile,BufRead *.cson,Cakefile,*.coffee,*.json*.js :call ConfigureSpaces(2) 
+
