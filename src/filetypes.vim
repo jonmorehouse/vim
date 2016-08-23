@@ -3,12 +3,13 @@
 "   General filetype configuration
 """""""""
 """""""""
-"help with file types
 filetype plugin indent on
 filetype plugin on
 
 " Declare the default file type for files with no extensions
 au BufNewFile,BufRead * if &ft == '' | setlocal ft=sh | endif
+" remove any trailing whitespace before saving
+autocmd BufWritePre * :%s/\s\+$//e
 
 """""""""
 """""""""
@@ -84,15 +85,12 @@ endfunction
 """""""""
 au BufNewFile,BufRead,BufWrite *go call ConfigureTabs(8)
 
-"""""""""
-"""""""""
-"   Vimfiler
-"""""""""
-"""""""""
-au BufNew,BufRead,BufWrite vimfiler* call Test()
-function! Test()
-  echo "hello"
-endfunction
+""""""""""
+""""""""""
+"    Gitcommit
+""""""""""
+""""""""""
+au BufNew,BufRead,BufWrite gitcommit call set textwidth=72
 
 """""""""
 """""""""
@@ -100,5 +98,3 @@ endfunction
 """""""""
 """""""""
 au BufNewFile,BufRead *.hs setlocal commentstring="--"
-
-
