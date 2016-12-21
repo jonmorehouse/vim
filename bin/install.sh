@@ -6,6 +6,8 @@ if [[ $OS == "linux" ]];then
 fi
 
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
+ln -sf $HOME/.vim/vm_vimrc $HOME/.vm_vimrc
+
 git submodule update --init --recursive
 
 # now install the dependencies
