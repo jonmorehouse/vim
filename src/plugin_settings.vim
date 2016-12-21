@@ -20,7 +20,7 @@ cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
 map ga :Gcommit -a <CR>
 map gp :Git pf <CR>
 let g:fugitive_git_executable = substitute(system("which hub"), '\n', '', '')
-map gi :!hub 
+map gi :!hub
 " map git commit filetypes so only have to exit and it auto saves
 fu! GitCommitHook()
   if &modifiable == 1
@@ -33,9 +33,9 @@ endfunction
 """"
 """" VimHub Mappings / Configuration
 """"
-"map mi :Gissues 
+"map mi :Gissues
 "map ml :Gissues <CR>
-"map mn :Gissue 
+"map mn :Gissue
 
 """
 """ Vim Gist Settings
@@ -52,12 +52,12 @@ map <Leader>l :FlowToggle<CR>
 
 """
 """ Vim Filer
-""" 
+"""
 " map escape to call the correct file / directory in vimfiler - or l
 let g:vimfiler_enable_auto_cd=1
 let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
-let g:vimfiler_ignore_pattern=0 
+let g:vimfiler_ignore_pattern=0
 let g:vimfiler_force_overwrite_statusline=1
 
 " make sure vimfiler windows work correctly with vim-fugitive

@@ -45,7 +45,7 @@ function! VimConfig()
 endfunction
 
 au BufNewFile,BufRead .shell_config setlocal filetype=sh
-au BufNewFile,BufRead *env,*.exports setlocal filetype=sh 
+au BufNewFile,BufRead *env,*.exports setlocal filetype=sh
 au BufNewFile,BufRead *.yml call ConfigureSpaces(2)
 au BufNewFile,BufRead *sh call ConfigureSpaces(2)
 au BufNewFile,BufRead *tf call ConfigureSpaces(4)
@@ -98,3 +98,11 @@ au BufNew,BufRead,BufWrite gitcommit call set textwidth=72
 """""""""
 """""""""
 au BufNewFile,BufRead *.hs setlocal commentstring="--"
+
+
+"""""""""
+"""""""""
+"   Terraform
+"""""""""
+"""""""""
+au BufNewFile,BufRead *tf call ConfigureSpaces(2)
