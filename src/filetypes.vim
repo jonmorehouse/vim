@@ -48,6 +48,7 @@ au BufNewFile,BufRead .shell_config setlocal filetype=sh
 au BufNewFile,BufRead *env,*.exports setlocal filetype=sh
 au BufNewFile,BufRead *.yml call ConfigureSpaces(2)
 au BufNewFile,BufRead *sh call ConfigureSpaces(2)
+au BufNewFile,BufRead *json call ConfigureSpaces(2)
 au BufNewFile,BufRead *tf call ConfigureSpaces(4)
 
 """""""""
@@ -66,6 +67,8 @@ function! MarkdownConfig()
 
 endfunction
 au Filetype markdown :call ConfigureSpaces(2)
+au Filetype sh :call ConfigureSpaces(2)
+au Filetype sshconfig :call ConfigureSpaces(2)
 
 """""""""
 """""""""
@@ -77,6 +80,8 @@ function! PythonConfig()
   setlocal filetype=python
   call ConfigureSpaces(4)
 endfunction
+
+au Filetype python :call ConfigureSpaces(4)
 
 """""""""
 """""""""
