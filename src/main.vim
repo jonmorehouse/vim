@@ -54,9 +54,10 @@ set shell=/bin/sh
 autocmd BufEnter setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set formatoptions-=cro
 " add in column count to status bar
-set statusline+=col:\ %c 
+set statusline+=col:\%c
 set statusline+=\ %F
 set colorcolumn=120
+set laststatus=2
 
 " formatting helpers
 vmap Q gq
