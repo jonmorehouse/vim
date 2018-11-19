@@ -50,6 +50,8 @@ au BufNewFile,BufRead *.yml call ConfigureSpaces(2)
 au BufNewFile,BufRead *sh call ConfigureSpaces(2)
 au BufNewFile,BufRead *json call ConfigureSpaces(2)
 au BufNewFile,BufRead *tf call ConfigureSpaces(4)
+au BufNewFile,BufRead *j2 call ConfigureSpaces(2)
+au BufNewFile,BufRead *html call ConfigureSpaces(2)
 
 """""""""
 """""""""
