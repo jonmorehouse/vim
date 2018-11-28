@@ -52,6 +52,8 @@ au BufNewFile,BufRead *json call ConfigureSpaces(2)
 au BufNewFile,BufRead *tf call ConfigureSpaces(4)
 au BufNewFile,BufRead *j2 call ConfigureSpaces(2)
 au BufNewFile,BufRead *html call ConfigureSpaces(2)
+au BufNewFile,BufRead *js call ConfigureSpaces(2)
+au BufNewFile,BufRead *jsx call ConfigureSpaces(2)
 
 """""""""
 """""""""
