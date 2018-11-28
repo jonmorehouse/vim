@@ -1,6 +1,6 @@
 """""""""
 """""""""
-"        Initialize general commands mapped off  
+"        Initialize general commands mapped off
 """""""""
 """""""""
 map C :let @/=""<CR><CR>
@@ -20,6 +20,7 @@ command! WW :w !sudo tee %
 """""""""
 command! Reload :call Reload()
 command! S :call Reload()
+map S :call Reload()<CR>
 
 """""""""
 """""""""
@@ -27,7 +28,6 @@ command! S :call Reload()
 """""""""
 """""""""
 " new tab shortcut
-map t :execute(":tabedit %")<CR>
 map t :execute(":tab sb ". bufnr('%'))<CR>
 map T :execute(":tabedit ". g:basePath)<CR>
 command! T :execute(":tabedit ". g:basePath)
@@ -36,7 +36,16 @@ map mc :close<CR>
 map md :bdelete!<CR>
 map mq :quit<CR>
 
-" close vim! 
+"""
+""" Window Shifting
+"""
+" resize windows
+map <C-h> :exe "vertical resize " . (winwidth(0) + 2)<CR>
+map <C-l> :exe "vertical resize " . (winwidth(0) - 2)<CR>
+map <C-j> :exe "resize " . (winheight(0) + 2)<CR>
+map <C-k> :exe "resize " . (winheight(0) - 2)<CR>
+
+" close vim!
 command! Q :quitall!
 map Q :quitall!<CR>
 
