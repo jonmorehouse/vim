@@ -14,8 +14,8 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'fatih/vim-go'
 Plugin 'godlygeek/tabular'
-""" NOTE move this to github later
 Plugin 'jonmorehouse/vim-nav'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 """
 """     WorkFlow
@@ -69,3 +69,5 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ejholmes/vim-forcedotcom'
 Plugin 'lepture/vim-jinja'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
