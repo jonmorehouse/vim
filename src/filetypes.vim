@@ -60,16 +60,7 @@ au BufNewFile,BufRead *jsx call ConfigureSpaces(2)
 "  Markdown files / markdown-like files
 """""""""
 """""""""
-au BufRead,BufNewFile * if expand('%') =~ "GHI_ISSUE*" |  call MarkdownConfig() | endif
-au BufNewFile,BufRead *.md call MarkdownConfig()
-au BufNewFile,BufRead .idea call MarkdownConfig()
-function! MarkdownConfig()
-
-  setlocal filetype=ghmarkdown
-  setlocal wrap
-  call ConfigureSpaces(2)
-
-endfunction
+au BufNewFile,BufRead *.md call ConfigureSpaces(2)
 au Filetype markdown :call ConfigureSpaces(2)
 au Filetype sh :call ConfigureSpaces(2)
 au Filetype sshconfig :call ConfigureSpaces(2)
