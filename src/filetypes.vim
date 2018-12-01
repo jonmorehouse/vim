@@ -60,10 +60,16 @@ au BufNewFile,BufRead *jsx call ConfigureSpaces(2)
 "  Markdown files / markdown-like files
 """""""""
 """""""""
-au BufNewFile,BufRead *.md call ConfigureSpaces(2)
-au Filetype markdown :call ConfigureSpaces(2)
+au BufNewFile,BufRead *.md call ConfigureMarkdown()
+au Filetype markdown :call ConfigureMarkdown()
 au Filetype sh :call ConfigureSpaces(2)
 au Filetype sshconfig :call ConfigureSpaces(2)
+
+function! ConfigureMarkdown()
+  call ConfigureSpaces(2)
+  setlocal wrap
+  setlocal formatoptions-=t
+endfunction
 
 """""""""
 """""""""

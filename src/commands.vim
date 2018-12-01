@@ -80,7 +80,7 @@ noremap ;; ;
 """ Copy / Search Mappings
 """
 " http://vimtips.quora.com/How-to-Copy-to-clipboard-on-vim
-map <S-y> y:e /tmp/vim<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim <CR>
+map <S-y> y:e /tmp/vim.md<CR>P:w !pbcopy<CR><CR>:BufSurfBack<CR>:bdelete! /tmp/vim.md <CR>
 " search for the highlighted text
 " this allows you to do then %s//replacement/g
 vnoremap // y/<C-R>"<CR>
