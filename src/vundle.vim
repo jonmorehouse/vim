@@ -27,7 +27,6 @@ Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-Plugin 'vim-scripts/TwitVim'
 Plugin 'jonmorehouse/vim-tmux'
 Plugin 'christoomey/vim-conflicted'
 

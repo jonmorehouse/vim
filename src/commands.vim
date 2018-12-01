@@ -91,6 +91,12 @@ vnoremap // y/<C-R>"<CR>
 map cn :cn<CR>
 map cp :cp<CR>
 
+fu! FocusMode()
+  set columns=134
+  set numberwidth=10
+endfunction
+command! F :call FocusMode()
+
 """
 """ Command prompt mappings
 """
