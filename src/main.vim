@@ -55,6 +55,8 @@ autocmd BufEnter setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set formatoptions-=cro
 " add in column count to status bar
 set statusline+=col:\%c
+set statusline+=\ %{WordCount()}\ words,
+set statusline+=\ %l/%L\ lines,\ %P " percentage through the file
 set statusline+=\ %F
 set colorcolumn=120
 set laststatus=2
