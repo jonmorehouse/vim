@@ -30,7 +30,7 @@ endfunction
 fu! AutoDirectoryChange()
 
   if &filetype == "netrw"
-    let path=expand(bufname(""))    
+    let path=expand(bufname(""))
   else
     let path=expand("%:p:h")
   endif
@@ -39,18 +39,18 @@ fu! AutoDirectoryChange()
 endfunction
 
 fu! CDSecondaryPath()
-  if !exists("g:secondaryPath")   
+  if !exists("g:secondaryPath")
     return
   endif
-  " if it does exist then we want to open the base dir 
+  " if it does exist then we want to open the base dir
   execute "VimFilerCreate " . expand(g:secondaryPath)
 endfunction
 
 " do nothing if the basePath dt reset path to the current path
 " this is useful for setting the path of tests to be run when you are working
-fu! GetPath() 
+fu! GetPath()
   if &filetype == "netrw"
-    return expand(bufname(""))    
+    return expand(bufname(""))
   else
     " cache the current word directory
     return getcwd()
@@ -67,7 +67,7 @@ endfunction
 
 """""""""
 """""""""
-"    GENERAL UTILITIES 
+"    GENERAL UTILITIES
 """""""""
 """""""""
 " don't redeclare Reload after the first vim bootup (ie: when you called Reload)
@@ -125,13 +125,13 @@ fu! ConfigureSpaces(spaces)
   execute "set tabstop=".a:spaces
   execute "set shiftwidth=".a:spaces
   execute "set softtabstop=".a:spaces
-  set expandtab 
+  set expandtab
 
   %retab!
 endfunction
 
 fu! SpacesToSpaces(spaces)
-    
+
     set noexpandtab
     %retab!
     call ConfigureSpaces(a:spaces)
