@@ -61,14 +61,20 @@ set statusline+=\ %F
 set colorcolumn=120
 set laststatus=2
 
-" formatting helpers
-vmap Q gq
-nmap Q gqap
+let g:word_count="<unknown>"
+" Update the count when cursor is idle in command or insert mode.
+" Update when idle for 1000 msec (default is 4000 msec).
+set updatetime=1000
+augroup WordCounter
+  au! CursorHold,CursorHoldI * call UpdateWordCount()
+augroup END
+
 
 """"""""
 """"""""
 "    Autocommands
 """"""""
+"""""""
 " ensure that we safely change the directory to the current buffer as changing
 autocmd BufEnter * silent! lcd %:p:h
 " always start normal window on the last line used
