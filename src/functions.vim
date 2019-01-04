@@ -151,11 +151,11 @@ endfunction
 "       WordCounts
 """"""""
 """""""""
-function WordCount()
+fu! WordCount()
   return g:word_count
 endfunction
 
-function UpdateWordCount()
+fu! UpdateWordCount()
   let lnum = 1
   let n = 0
   while lnum <= line('$')
