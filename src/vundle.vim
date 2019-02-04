@@ -25,6 +25,7 @@ Plugin 'vim-scripts/localrc.vim'
 Plugin 'jonmorehouse/vim-open'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'jonmorehouse/vim-tmux'
@@ -40,6 +41,7 @@ Plugin 'goldfeld/vim-seek'
 Plugin 'ton/vim-bufsurf'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rbgrouleff/bclose.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 """
 """     COLORSCHEMES
