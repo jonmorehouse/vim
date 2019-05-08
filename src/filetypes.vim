@@ -56,6 +56,8 @@ au BufNewFile,BufRead *js call ConfigureSpaces(2)
 au BufNewFile,BufRead *jsx call ConfigureSpaces(2)
 au BufNewFile,BufRead *xml call ConfigureSpaces(2)
 au BufNewFile,BufRead *scala call ConfigureSpaces(2)
+au BufNewFile,BufRead *java call ConfigureSpaces(4)
+au BufNewFile,BufRead *template call ConfigureSpaces(2)
 
 """""""""
 """""""""
