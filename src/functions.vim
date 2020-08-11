@@ -111,7 +111,6 @@ endfunction
 """""""""
 """""""""
 fu! ConfigureTabs(spaces)
-
   execute "set tabstop=".a:spaces
   execute "set shiftwidth=".a:spaces
   execute "set softtabstop=".a:spaces
@@ -121,7 +120,6 @@ fu! ConfigureTabs(spaces)
 endfunction
 
 fu! ConfigureSpaces(spaces)
-
   execute "set tabstop=".a:spaces
   execute "set shiftwidth=".a:spaces
   execute "set softtabstop=".a:spaces

@@ -20,7 +20,6 @@ cabbrev g <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'G' : 'g')<CR>
 map ga :Gcommit -a <CR>
 map gp :Git pf <CR>
 let g:fugitive_git_executable = substitute(system("which hub"), '\n', '', '')
-map gi :!hub
 " map git commit filetypes so only have to exit and it auto saves
 fu! GitCommitHook()
   if &modifiable == 1
@@ -70,7 +69,10 @@ let g:vimfiler_execute_file_list['_'] = 'vim'
 """
 """ Vim Go
 """
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = 'gofmt'
+let g:go_def_mode = 'godef'
+
+map gi :GoImports<CR>
 
 """
 """ Vimmarks

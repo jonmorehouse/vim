@@ -51,7 +51,7 @@ au BufNewFile,BufRead *sh call ConfigureSpaces(2)
 au BufNewFile,BufRead *json call ConfigureSpaces(2)
 au BufNewFile,BufRead *tf call ConfigureSpaces(4)
 au BufNewFile,BufRead *j2 call ConfigureSpaces(2)
-au BufNewFile,BufRead *html call ConfigureSpaces(2)
+au BufNewFile,BufRead *html call ConfigureHtml()
 au BufNewFile,BufRead *js call ConfigureSpaces(2)
 au BufNewFile,BufRead *jsx call ConfigureSpaces(2)
 au BufNewFile,BufRead *xml call ConfigureSpaces(2)
@@ -60,6 +60,7 @@ au BufNewFile,BufRead *java call ConfigureSpaces(4)
 au BufNewFile,BufRead *template call ConfigureSpaces(2)
 au BufNewFile,BufRead *cpp call ConfigureSpaces(4)
 au BufNewFile,BufRead Dockerfile call ConfigureSpaces(2)
+au BufNewFile,BufRead *plist call ConfigureSpaces(2)
 
 """""""""
 """""""""
@@ -74,6 +75,11 @@ au Filetype sshconfig :call ConfigureSpaces(2)
 function! ConfigureMarkdown()
   call ConfigureSpaces(2)
   setlocal wrap
+  setlocal formatoptions-=t
+endfunction
+
+function! ConfigureHtml()
+  call ConfigureSpaces(2)
   setlocal formatoptions-=t
 endfunction
 
@@ -95,7 +101,14 @@ au Filetype python :call ConfigureSpaces(4)
 "   Golang
 """""""""
 """""""""
+function! ConfigureGo()
+  echo "hello world"
+  setlocal expandtab
+  call ConfigureTabs(8)
+endfunction
+
 au BufNewFile,BufRead,BufWrite *go call ConfigureTabs(8)
+autocmd FileType go setlocal expandtab
 
 """"""""""
 """"""""""

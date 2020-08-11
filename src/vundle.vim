@@ -62,7 +62,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'elzr/vim-json'
-Plugin 'jonmorehouse/vim-markdown' "normal markdown
+" Plugin 'jonmorehouse/vim-markdown' "normal markdown
 Plugin 'sickill/vim-monokai'
 Plugin 'markcornick/vim-terraform'
 Plugin 'rust-lang/rust.vim'
