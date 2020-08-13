@@ -3,12 +3,14 @@
 """
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
 
+call vundle#rc()
 """
 """     UTILITIES
 """
+Plugin 'jonmorehouse/vim-flow'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'jonmorehouse/vim-utilities'
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
@@ -20,7 +22,6 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 """
 """     WorkFlow
 """
-Plugin 'jonmorehouse/vim-flow'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'jonmorehouse/vim-open'
 Plugin 'mileszs/ack.vim'
@@ -49,7 +50,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
-Plugin 'sickill/vim-monokai'
+"Plugin 'sickill/vim-monokai'
 Plugin 'vim-scripts/peaksea'
 Plugin 'sickill/vim-sunburst'
 
