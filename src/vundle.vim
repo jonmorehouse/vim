@@ -43,6 +43,8 @@ Plugin 'ton/vim-bufsurf'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rbgrouleff/bclose.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 """
 """     COLORSCHEMES

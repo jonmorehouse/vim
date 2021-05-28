@@ -53,12 +53,17 @@ set shell=/bin/sh
 "autocmd * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufEnter setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set formatoptions-=cro
-"
+
+
 """ Text wrapping / customization
 """
 " automatically wrap all text to 120 columns
 set tw=120
 set formatoptions=tcqaw
+
+""" Configure Relative Line""
+" automatically wrap all text to 120 columns
+set number relativenumber
 
 
 """"""""

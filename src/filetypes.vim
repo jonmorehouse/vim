@@ -11,6 +11,15 @@ au BufNewFile,BufRead * if &ft == '' | setlocal ft=sh | endif
 " remove any trailing whitespace before saving
 autocmd BufWritePre * :%s/\s\+$//e
 
+" disable all line wrapping
+function! DisableWrap()
+  set textwidth=0
+  set wrapmargin=0
+  set formatoptions-=t
+  set nowrap
+  echom "line/text wrapping disabled"
+endfunction
+
 """""""""
 """""""""
 "  Ruby and ruby related file types
