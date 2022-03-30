@@ -78,8 +78,37 @@ let g:vimfiler_execute_file_list['_'] = 'vim'
 """
 """ Vim Go
 """
+set updatetime=100
 let g:go_fmt_command = 'gofmt'
 let g:go_def_mode = 'godef'
+let g:go_auto_type_info = 1
+let g:go_doc_popup_window = 1
+let g:go_imports_mode = 1
+
+let g:go_highlight_functions = 0
+let g:go_highlight_operators = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_types = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+
+let g:go_disable_autoinstall = 1
+let g:go_term_enabled = 1
+let g:go_term_reuse = 1
+let g:go_term_mode = "split"
+let g:go_term_height = 20
+let g:go_metalinter_command = "golangci-lint"
+
+" enable autocompletion
+let g:completor_filetype_map = {}
+let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls -remote=auto'}"
 
 map gi :GoImports<CR>
 
