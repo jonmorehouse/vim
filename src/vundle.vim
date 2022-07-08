@@ -23,6 +23,7 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 """
 """     WorkFlow
 """
+Plugin 'rhysd/vim-github-actions'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'jonmorehouse/vim-open'
 Plugin 'mileszs/ack.vim'

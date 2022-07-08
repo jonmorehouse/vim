@@ -111,8 +111,24 @@ let g:completor_filetype_map = {}
 let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls -remote=auto'}"
 
 map gi :GoImports<CR>
+map gb :GoBuild<CR>
+map gt :GoTest<CR>
+map gv :GoVet<CR>
+map gl :GoMetaLinter<CR>
+map gh :GoDoc<CR>
 
 """
 """ Vimmarks
 """
 let g:vimmarks_debug = 1
+
+"""
+""" FZF configuration
+"""
+function! OpenFZF()
+  let path=trim(system("git rev-parse --show-toplevel"))
+  execute(":Files " . path)
+endfunction
+map <Leader>o :call OpenFZF()<CR>
+
+map <Leader>p :Files ~/clones<CR>

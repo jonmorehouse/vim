@@ -111,3 +111,19 @@ let g:solarized_termtrans=1
 let g:solarized_visibility="high"
 let g:solarized_contrast="high"
 colorscheme solarized
+
+"""""""""
+"""""""""
+"       Quick Fix
+"""""""""
+"""""""""
+augroup quickfix
+    autocmd!
+    autocmd FileType qf setlocal wrap
+augroup END
+
+"""
+""" Best escape sequence ever ...
+"""
+imap jk <ESC>
+imap kj <ESC>
